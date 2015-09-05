@@ -1,1 +1,208 @@
-hello world
+<html>
+<head>
+<title>dropmenu</title>
+<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="themes/default/dropmenu.css" rel="stylesheet">
+<link href="octicons/octicons.css" rel="stylesheet">
+<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="src/dropmenu.js"></script>
+<style type="text/css">
+h1{
+    text-align: center;
+}
+.dropmenu{
+    display: inline-block;
+    margin-left: 100px;
+}
+</style>
+<script type="text/javascript">
+	$(function(){
+ $("#shownav").dropmenu({
+            title: 'demo1',
+            display: 'complex',
+            showFilter: true
+        });
+
+ $("#shownav4").dropmenu({
+            title: 'demo1',
+            display: 'complex',
+            showFilter: false
+        });
+
+ $("#shownav2").dropmenu({
+            title: 'demo2',
+            width:'180px',
+            display: 'simple',
+            padding:'3px',
+            fontWeight:false,
+            showCaret:true
+        });
+
+
+  $("#shownav3").dropmenu({
+            title: 'demo3',
+            width:'180px',
+            display: 'simple',
+            padding:'3px',
+            position:'right',
+            fontWeight:false,
+            showCaret:true
+        });
+	});
+</script>
+</head>
+<body>
+    <h1>dropmenu demo</h1>
+ <div class="dropmenu">
+            <button id="shownav" class="btn btn-default weibtn" data-toggle="dropmenu" aria-expanded="false"><span
+                    class="octicon octicon-check"></span>demo1<b class="caret"></b></button>
+
+            <div class="dropmenu-panel">
+                <div class="dropmenu-header">
+                    <span class="dropmenu-title">title</span>
+                    <span class="octicon octicon-x header-close" role="button" aria-label="Close"></span>
+                </div>
+                <div class="dropmenu-filters">
+                    <div class="dropmenu-filter">
+                        <input type="text" class="filter-input" placeholder="please input content">
+                    </div>
+                </div>
+                <div class="dropmenu-items">
+                    <div class="dropmenu-item">
+                        <span class="item-icon"></span>
+                        <span class="item-content">
+                            <div class="item-lable">test</div>
+                            <div class="item-note">this is content</div>
+                        </span>
+                    </div>
+                    <div class="dropmenu-item">
+                        <span class="item-icon octicon octicon-check"></span>
+                        <span class="item-content">
+                            <div class="item-lable">test</div>
+                            <div class="item-note">this is conent</div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+</div>
+            <div class="dropmenu">
+            <button id="shownav4" class="btn btn-default weibtn" data-toggle="dropmenu" aria-expanded="false"><span
+                    class="octicon octicon-check"></span>demo1<b class="caret"></b></button>
+
+            <div class="dropmenu-panel">
+                <div class="dropmenu-header">
+                    <span class="dropmenu-title">title</span>
+                    <span class="octicon octicon-x header-close" role="button" aria-label="Close"></span>
+                </div>
+                <div class="dropmenu-filters">
+                    <div class="dropmenu-filter">
+                        <input type="text" class="filter-input" placeholder="please input content">
+                    </div>
+                </div>
+                <div class="dropmenu-items">
+                    <div class="dropmenu-item">
+                        <span class="item-icon"></span>
+                        <span class="item-content">
+                            <div class="item-lable">test</div>
+                            <div class="item-note">this is content</div>
+                        </span>
+                    </div>
+                    <div class="dropmenu-item">
+                        <span class="item-icon octicon octicon-check"></span>
+                        <span class="item-content">
+                            <div class="item-lable">test</div>
+                            <div class="item-note">this is conent</div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+</div>
+       
+            
+
+             <div class="dropmenu">
+            <a href="#" id="shownav2" data-toggle="dropmenu" aria-expanded="false"><span
+                    class="octicon octicon-check"></span>demo2<b class="caret"></b></a>
+
+            <div class="dropmenu-panel">
+                <div class="dropmenu-header">
+                    <span class="dropmenu-title">title</span>
+                    <span class="octicon octicon-x header-close" role="button" aria-label="Close"></span>
+                </div>
+                <div class="dropmenu-filters">
+                    <div class="dropmenu-filter">
+                        <input type="text" class="filter-input" placeholder="please input content">
+                    </div>
+                </div>
+                <div class="dropmenu-items">
+                    <div class="dropmenu-item">
+                        <span class="item-icon"></span>
+                        <span class="item-content">
+                            <div class="item-lable">test</div>
+                        </span>
+                    </div>
+                    <div class="dropmenu-item">
+                        <span class="item-icon octicon octicon-check"></span>
+                        <span class="item-content">
+                            <div class="item-lable">test</div>
+                        </span>
+                    </div>
+                    <div class="dropmenu-item">
+                        <span class="item-icon"></span>
+                        <span class="item-content">
+                            <div class="item-lable">test</div>
+                        </span>
+                    </div>
+                    <div class="dropmenu-item">
+                        <span class="item-icon"></span>
+                        <span class="item-content">
+                            <div class="item-lable">test</div>
+                        </span>
+                    </div>
+                </div></div>
+            </div>
+ <div class="dropmenu">
+            <a href="#" id="shownav3" data-toggle="dropmenu" aria-expanded="false"><span
+                    class="octicon octicon-check"></span>demo3<b class="caret"></b></a>
+
+            <div class="dropmenu-panel">
+                <div class="dropmenu-header">
+                    <span class="dropmenu-title">title</span>
+                    <span class="octicon octicon-x header-close" role="button" aria-label="Close"></span>
+                </div>
+                <div class="dropmenu-filters">
+                    <div class="dropmenu-filter">
+                        <input type="text" class="filter-input" placeholder="please input content">
+                    </div>
+                </div>
+                <div class="dropmenu-items">
+                    <div class="dropmenu-item">
+                        <span class="item-icon"></span>
+                        <span class="item-content">
+                            <div class="item-lable">test</div>
+                        </span>
+                    </div>
+                    <div class="dropmenu-item">
+                        <span class="item-icon octicon octicon-check"></span>
+                        <span class="item-content">
+                            <div class="item-lable">test</div>
+                        </span>
+                    </div>
+                    <div class="dropmenu-item">
+                        <span class="item-icon"></span>
+                        <span class="item-content">
+                            <div class="item-lable">test</div>
+                        </span>
+                    </div>
+                    <div class="dropmenu-item">
+                        <span class="item-icon"></span>
+                        <span class="item-content">
+                            <div class="item-lable">test</div>
+                             <div class="item-note">this is content</div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+                </div>
+</body>
+</html>
