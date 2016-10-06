@@ -27,3 +27,6 @@ github_username:  zhangwei900808
 # Build settings
 markdown: kramdown
 theme: minima
+# page
+paginate: 5
+paginate_path: "page:num"
