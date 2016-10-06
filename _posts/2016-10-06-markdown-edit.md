@@ -4,28 +4,36 @@ title:  "好用的Markdown编辑器一览"
 date:   2016-10-06 14:40 +0800
 categories: markdown
 ---
-Markdown 免费编辑器
+##Markdown 免费编辑器
 
-Windows 平台
+###Windows 平台
 
-MarkdownPad
-MarkPad
-Linux 平台
+* MarkdownPad
+* MarkPad
+* Red
+* Green
+* Blue
 
-ReText
-Mac 平台
+###Linux 平台
 
-Mou
-在线编辑器
+* ReText
 
-Markable.in
-Dillinger.io
-浏览器插件
+###Mac 平台
 
-MaDe (Chrome)
-高级应用
+* Mou
 
-Sublime Text 2 + MarkdownEditing / 教程
+###在线编辑器
 
-参考地址：
+* Markable.in
+* Dillinger.io
+
+###浏览器插件
+
+* MaDe (Chrome)
+
+###高级应用
+
+* Sublime Text 2 + MarkdownEditing / 教程
+
+###参考地址：
 1、<http://www.williamlong.info/archives/4319.html>
