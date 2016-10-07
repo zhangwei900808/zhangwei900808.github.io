@@ -1,8 +1,8 @@
 ---
-layout:post
-title:'解决macos sierra 备忘录崩溃问题'
-date:2016-10-07 11:28:00
-categories:macbook sierra note
+layout: post
+title: '解决macos sierra 备忘录崩溃问题'
+date: 2016-10-07 11:28:00
+categories: macbook sierra note
 ---
 
 最近升级了macos sierra 10.12，使用效果还不错，但是在使用备忘录的过程中出现了一个bug，如图：
