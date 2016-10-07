@@ -13,12 +13,12 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: ZhangWei's Blog 张威的博客
+title: ZhangWei's Blog
 email: zw900808@gmail.com
 description: > # 学习是一个过程，不能一蹴而就，如果你这样做了，那么你就会感觉到迷茫，因为学习从来就是一个从点到面的过程，如果你突然跳到一个面你会无所适从，
-因为你会发现你站着的面没有一个点来支撑你，最终你会徒劳无获。真正的做法应该是学习一个个知识点，当你了解的知识点已经非常多的时候你就发现你的知识面已经形成，这时候
-你站在这个面上你能感觉到管中窥豹，一揽众山小的感觉，而这个过程需要时间的长期积累。为什么有些人就能成功而你不行？因为他的时间都拿来学习这一个个的知识点，
-所以他能很快形成知识面，所以就有句俗话说：时间就是金钱。想必也是这样来的。
+  因为你会发现你站着的面没有一个点来支撑你，最终你会徒劳无获。真正的做法应该是学习一个个知识点，当你了解的知识点已经非常多的时候你就发现你的知识面已经形成，这时候
+  你站在这个面上你能感觉到管中窥豹，一揽众山小的感觉，而这个过程需要时间的长期积累。为什么有些人就能成功而你不行？因为他的时间都拿来学习这一个个的知识点，
+  所以他能很快形成知识面，所以就有句俗话说：时间就是金钱。想必也是这样来的。
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://awbeci.xyz" # the base hostname & protocol for your site
 twitter_username: zhangwei0808
