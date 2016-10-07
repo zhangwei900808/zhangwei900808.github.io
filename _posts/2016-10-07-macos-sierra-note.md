@@ -7,6 +7,7 @@ categories: macbook sierra note
 
 最近升级了macos sierra 10.12，使用效果还不错，但是在使用备忘录的过程中出现了一个bug，如图：
 
+![GitHub set up-w140](http://zh.mweb.im/asset/img/set-up-git.gif)
 
 于是我到打电话给Apple客服，客服要我重新添加一个用户然后转到这个新用户上面，因为老账户上面有好多资料，所以我不同意，然后跟他说我自己解决，然后到网上找，终于找到方法了：
 
