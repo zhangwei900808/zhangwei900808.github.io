@@ -7,7 +7,8 @@ categories: macbook sierra note
 
 最近升级了macos sierra 10.12，使用效果还不错，但是在使用备忘录的过程中出现了一个bug，如图：
 
-![GitHub set up-w140](http://zh.mweb.im/asset/img/set-up-git.gif)
+![屏幕快照 2016-10-07 上午11.17.54](media/14757168313743/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-10-07%20%E4%B8%8A%E5%8D%8811.17.54.png)
+
 
 于是我到打电话给Apple客服，客服要我重新添加一个用户然后转到这个新用户上面，因为老账户上面有好多资料，所以我不同意，然后跟他说我自己解决，然后到网上找，终于找到方法了：
 
