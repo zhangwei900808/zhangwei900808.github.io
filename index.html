@@ -14,10 +14,10 @@ layout: default
     <span class="date">{{ post.date }}</span>
   </p>
   <div class="content">
-    {{ post.content }}
+    {{ post.content | strip_html | truncate:200 }}
   </div>
 {% endfor %}
-    
+
   </ul>
   {% if paginator.total_pages > 1 %}
 <div class="pagination">
