@@ -28,7 +28,7 @@ github_username:  zhangwei900808
 markdown: kramdown
 theme: minima
 # page
-paginate: 5
+paginate: 15
 paginate_path: "/blog/page:num/"
 
 comments :
