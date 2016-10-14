@@ -6,7 +6,59 @@ categories: mobile
 ---
 
 ### 写这个博客的目的就是为了以后如果遇到相同的需求可以直播复制这段代码。
+html:
 
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<title>故事包</title>
+<link rel="icon" type="image/png" href="/resources/img/md_a1.png">
+<link href="//cdn.bootcss.com/weui/0.4.3/style/weui.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/jquery-weui/0.8.1/css/jquery-weui.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/resources/css/mobileBind.css" media="screen" title="no title">
+</head>
+<body>
+	<header class="logo">
+		<img src="/resources/img/md_logo_84X37.png">
+	</header>
+	<div class="weui_cells weui_cells_form">
+		<div class="weui_cell">
+			<div class="weui_cell_hd">
+				<label class="weui_label">手机号</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary">
+				<input id="tel" class="weui_input" type="number" placeholder="请输入手机号">
+			</div>
+		</div>
+		<div class="weui_cell">
+			<div class="weui_cell_hd">
+				<label class="weui_label">验证码</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary">
+				<input class="weui_input" type="number" placeholder="请输入验证码">
+			</div>
+			<div class="weui_cell_ft">
+				<a id="getCode" href="javascript:;" class="weui_btn weui_btn_mini weui_btn_warn">获取验证码</a>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<a href="javascript:;" class="weui_btn weui_btn_primary">完成</a>
+	</footer>
+	<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+	<script src="//cdn.bootcss.com/jquery-weui/0.8.1/js/jquery-weui.min.js"></script>
+```
+
+javascript:
 ```js
 $(function() {
 			$('#tel').bind('input propertychange', function() {
