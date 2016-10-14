@@ -63,9 +63,9 @@ $(function() {
 		}
 ```
 
-![]((http://cdn.awbeci.xyz/images/awbeci-xyz/blog/2016-10-14-mobile-bind-1.png))
+![](http://cdn.awbeci.xyz/images/awbeci-xyz/blog/2016-10-14-mobile-bind-1.png)
 
-![]((http://cdn.awbeci.xyz/images/awbeci-xyz/blog/2016-10-14-mobile-bind-2.png))
+![](http://cdn.awbeci.xyz/images/awbeci-xyz/blog/2016-10-14-mobile-bind-2.png)
 
-![]((http://cdn.awbeci.xyz/images/awbeci-xyz/blog/2016-10-14-mobile-bind-3.png))
+![](http://cdn.awbeci.xyz/images/awbeci-xyz/blog/2016-10-14-mobile-bind-3.png)
 
