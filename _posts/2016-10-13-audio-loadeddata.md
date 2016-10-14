@@ -11,10 +11,10 @@ categories: audio loadeddata
 
 ![](http://cdn.awbeci.com/images/awbeci-xyz/blog/2.png)
 
-```
+
 参考：
 
-http://acplayer.awbeci.xyz
+<http://acplayer.awbeci.xyz>
 
-https://github.com/zhangwei900808/AcPlayer
-```
+<https://github.com/zhangwei900808/AcPlayer>
+
