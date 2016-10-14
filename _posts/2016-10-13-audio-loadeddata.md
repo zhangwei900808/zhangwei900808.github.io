@@ -17,4 +17,3 @@ categories: audio loadeddata
 <http://acplayer.awbeci.xyz>
 
 <https://github.com/zhangwei900808/AcPlayer>
-```
