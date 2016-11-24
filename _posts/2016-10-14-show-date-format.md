@@ -7,7 +7,7 @@ categories: js
 
 #### 公司开发过程中，遇到好多公用的js，比如这个,根据秒数显示指定格式的字符串，以备日后使用。
 
-```js
+{% highlight javascript %}
 function formatSeconds(value) {
 	var second = parseInt(value);// 秒
 	var minute = 0;// 分
@@ -52,6 +52,6 @@ function formatSeconds(value) {
 	}
 	return second;
 }
-```
+{% endhighlight %}
 
 ![](http://cdn.awbeci.com/images/awbeci-xyz/blog/2016-10-14-js-date-format.png)
