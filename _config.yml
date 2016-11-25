@@ -37,3 +37,5 @@ comments :
     short_name : liberize
   disqus :
       short_name : liberize
+sass:
+    sass_dir: _sass
