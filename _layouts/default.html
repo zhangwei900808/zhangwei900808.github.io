@@ -6,9 +6,11 @@
     <link rel="stylesheet" href="/css/main.css" media="screen" title="no title">
   </head>
   <body>
-    {% include header.html %}
-    {% include left.html %}
-    {{ content }}
-    {% include footer.html %}
+    <section class="blog-container">
+      {% include header.html %}
+      {% include left.html %}
+      {{ content }}
+      {% include footer.html %}
+    </section>
   </body>
 </html>
