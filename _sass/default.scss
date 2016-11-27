@@ -32,6 +32,10 @@ ul li{
 }
 
 .pager{
-  display: flex;
-  justify-content: flex-end;
+  .previous{
+    float: left;
+  }
+  .next{
+    float: right;
+  }
 }
