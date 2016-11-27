@@ -50,6 +50,11 @@
     .list-inline{
       margin-top:100px;
       @extend .flex-center;
+      a{
+        &:hover{
+          color:#2a7ae2;
+        }
+      }
     }
   }
 }
