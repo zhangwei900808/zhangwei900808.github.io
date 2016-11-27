@@ -1,3 +1,5 @@
+
+
 .left-container{
   background: #333;
   width: 300px;
@@ -8,12 +10,10 @@
   top: 0;
   left: 0;
   z-index: 999;
-}
 
-.left-container{
-    header{
-      img{
-        width: 100%;
-      }
+  header{
+    img{
+      width: 100%;
     }
+  }
 }
