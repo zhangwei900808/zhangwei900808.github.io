@@ -28,9 +28,7 @@
       }
     }
     .nicename{
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      $flex-center;
       margin: .67em 0;
       a{
         color: #fff;
