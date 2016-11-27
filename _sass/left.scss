@@ -28,6 +28,10 @@
       }
     }
     .nicename{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: .67em 0;
       a{
         color: #fff;
         background: transparent;
