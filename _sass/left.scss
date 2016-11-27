@@ -47,5 +47,8 @@
         line-height: 25px;
       }
     }
+    .list-inline{
+      @extend .flex-center;
+    }
   }
 }
