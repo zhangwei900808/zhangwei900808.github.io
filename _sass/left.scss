@@ -49,6 +49,14 @@
     }
     .navbar{
       @extend .flex-center;
+      a{
+        color: #999;
+        font-size: 12px;
+        line-height: 25px;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
     }
     .list-inline{
       margin-top:100px;
