@@ -4,7 +4,7 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">文章列表1</h1>
+  <h1 class="page-heading">文章列表</h1>
 
   <ul class="post-list">
     <!-- This loops through the paginated posts -->
@@ -17,39 +17,25 @@ layout: default
     {{ post.content | strip_html | truncate:200 }}
   </div>
   <p class="post-meta">
-       Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
+       Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%Y-%M-%d HH:mm" }}
    </p>
 {% endfor %}
 
   </ul>
 
-
-
-
-
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a class="jumbotron-icon" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-long-arrow-left fa-2" aria-hidden="true"></i></a>
-  {% else %}
-    <span class="jumbotron-icon"><i class="fa fa-long-arrow-left fa-2" aria-hidden="true"></i></span>
-  {% endif %}
-
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      <em>{{ page }}</em>
-    {% elsif page == 1 %}
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-    {% else %}
-      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+-<div class="pagination">
+{% if paginator.total_pages > 1 %}
+<ul class="pager">
+    {% if paginator.previous_page %}
+    <li class="previous">
+        <a class="jumbotron-icon" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-long-arrow-left fa-2" aria-hidden="true"></i></a>
+    </li>
     {% endif %}
-  {% endfor %}
-
-  {% if paginator.next_page %}
-    <a class="jumbotron-icon" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-long-arrow-right fa-2" aria-hidden="true"></i></a>
-  {% else %}
-    <span class="jumbotron-icon"><i class="fa fa-long-arrow-right fa-2" aria-hidden="true"></i></span>
-  {% endif %}
-</div>
+    {% if paginator.next_page %}
+    <li class="next">
+        <a class="jumbotron-icon" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-long-arrow-right fa-2" aria-hidden="true"></i></a>
+    </li>
+    {% endif %}
+</ul>
 {% endif %}
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 </div>
