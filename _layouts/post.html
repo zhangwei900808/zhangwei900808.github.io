@@ -11,7 +11,7 @@
       {% include header.html %}
       {% include left.html %}
       {{ content }}
-      {% include footer.html %}
+      
       <div id="ds-thread" class="ds-thread" data-url="{{ page.url }}" data-title="{{ page.title }}" data-thread-key="{{ page.title }}"></div>
       <!-- 多说评论框 end -->
       <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
@@ -27,6 +27,7 @@
         })();
         </script>
       <!-- 多说公共JS代码 end -->
+      {% include footer.html %}
     </section>
   </body>
 </html>
