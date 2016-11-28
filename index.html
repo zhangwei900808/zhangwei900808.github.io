@@ -24,8 +24,7 @@ layout: default
   </ul>
 
 
--<div class="pagination">
-  <!-- Pager -->
+<!-- -<div class="pagination">
 {% if paginator.total_pages > 1 %}
 <ul class="pager">
     {% if paginator.previous_page %}
@@ -40,11 +39,11 @@ layout: default
     {% endif %}
 </ul>
 {% endif %}
-</div>
+</div> -->
 
 
 
-<!-- <div class="pagination">
+<div class="pagination">
   {% if paginator.previous_page %}
     <a class="jumbotron-icon" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-long-arrow-left fa-2" aria-hidden="true"></i></a>
   {% else %}
@@ -69,4 +68,4 @@ layout: default
 </div>
 {% endif %}
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-</div> -->
+</div>
