@@ -72,7 +72,7 @@ hr{
 
 .pagination{
   .pager{
-    @extend flex-center;
+    @extend .flex-center;
     width: 100%;
     .previous{
       width: 100%;
