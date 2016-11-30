@@ -19,7 +19,7 @@ hr{
   position: absolute;
   right: 0;
   min-height: 100%;
-  background-color: #eaeaea;
+  background-color: #ddd;
   left: 300px;
   width: auto;
 }
@@ -30,7 +30,9 @@ hr{
   justify-content: center;
 }
 .home{
-  padding: 20px 50px;
+  margin: 30px;
+  padding-right: 7.6923%;
+    padding-left: 7.6923%;
   background-color: #fff;
 }
 .post-list{
@@ -70,5 +72,3 @@ hr{
     float: right;
   }
 }
-
-
