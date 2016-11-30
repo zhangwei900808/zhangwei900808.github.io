@@ -25,6 +25,16 @@ ul li{
   justify-content: center;
 }
 
+.post-list{
+  h1{
+    a{
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+}
+
 .jumbotron-icon{
   .fa-2{
         font-size: 2em;
@@ -39,3 +49,5 @@ ul li{
     float: right;
   }
 }
+
+
