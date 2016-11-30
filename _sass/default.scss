@@ -35,6 +35,7 @@ hr{
   background-color: #fff;
 }
 .post-list{
+  display: inline-block;
   li{
     margin-bottom: 0;
     header{
@@ -68,11 +69,13 @@ hr{
   }
 }
 
-.pager{
-  .previous{
-    float: left;
-  }
-  .next{
-    float: right;
+.pagination{
+  .pager{
+    .previous{
+      float: left;
+    }
+    .next{
+      float: right;
+    }
   }
 }
