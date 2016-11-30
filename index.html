@@ -6,6 +6,7 @@ layout: default
   <ul class="post-list">
     <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
+<li>
   <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
   <!--<p class="author">
     <span class="date">{{ post.date | date: "%Y-%m-%d %H:%m" }}</span>
@@ -17,9 +18,10 @@ layout: default
        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%Y-%m-%d %H:%m" }}
    </p>
 <hr>
+</li>
 {% endfor %}
   </ul>
- 
+
 <div class="pagination">
 {% if paginator.total_pages > 1 %}
 <ul class="pager">
