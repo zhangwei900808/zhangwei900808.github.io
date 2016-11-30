@@ -79,18 +79,22 @@ hr{
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      padding: 10px;
-      background-color: #eee;
-      border-radius: 50%;
+      a{
+        padding: 10px;
+        background-color: #eee;
+        border-radius: 50%;
+      }
     }
     .next{
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      padding: 10px;
-      background-color: #eee;
-      border-radius: 50%;
+      a{
+        padding: 10px;
+        background-color: #eee;
+        border-radius: 50%;
+      }
     }
   }
 }
