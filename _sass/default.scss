@@ -36,14 +36,16 @@ hr{
 }
 .post-list{
   header{
-    a{
-      color:#404040;
-      &:hover{
-        color:#2a7ae2;
-        text-decoration: none;
+    h1{
+      a{
+        color:#404040;
+        &:hover{
+          color:#2a7ae2;
+          text-decoration: none;
+        }
       }
     }
-  }
+  }  
   .content{
     color:#a3a3a3;
     font-size: 14px;
