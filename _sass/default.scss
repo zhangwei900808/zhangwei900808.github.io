@@ -35,27 +35,29 @@ hr{
   background-color: #fff;
 }
 .post-list{
-  header{
-    h1{
-      a{
-        color:#404040;
-        &:hover{
-          color:#2a7ae2;
-          text-decoration: none;
+  li{
+    header{
+      h1{
+        a{
+          color:#404040;
+          &:hover{
+            color:#2a7ae2;
+            text-decoration: none;
+          }
         }
       }
     }
-  }  
-  .content{
-    color:#a3a3a3;
-    font-size: 14px;
-  }
-  .post-meta{
-    font-family: Lora,'Times New Roman',serif;
-    color: gray;
-    font-size: 16px;
-    font-style: italic;
-    margin-top: 5px;
+    .content{
+      color:#a3a3a3;
+      font-size: 14px;
+    }
+    .post-meta{
+      font-family: Lora,'Times New Roman',serif;
+      color: gray;
+      font-size: 16px;
+      font-style: italic;
+      margin-top: 5px;
+    }
   }
 }
 
