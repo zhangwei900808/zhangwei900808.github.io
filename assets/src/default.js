@@ -1,5 +1,5 @@
 $(function(){
   $('#showCategories').click(function(e){
-    $('.categories').addClass('show-in');
+    $('.categories').addClass('show-out');
   })
 })
