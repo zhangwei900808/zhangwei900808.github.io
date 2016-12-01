@@ -18,7 +18,7 @@ layout: default
     {{ post.content | strip_html | truncate:200 }}
   </div>
   <p class="post-meta">
-       Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on <time><i class="icon-clock"></i>{{ post.date | date: "%Y-%m-%d %H:%m" }}</time>
+       Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on <time><i class="fa fa-clock-o" aria-hidden="true"></i>{{ post.date | date: "%Y-%m-%d %H:%m" }}</time>
    </p>
 <hr>
 </li>
