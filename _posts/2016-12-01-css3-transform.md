@@ -15,14 +15,12 @@ categories: css3
 ```
 
 
-### CSS3中Transform,Transition,Animation的区别
-Transform：对元素进行变形；
-Transition：对元素某个属性或多个属性的变化，进行控制（时间等），类似flash的补间动画。但只有两个关键贞。开始，结束。
-
-Animation：对元素某个属性或多个属性的变化，进行控制（时间等），类似flash的补间动画。可以设置多个关键贞。
-
-Transition与Animation:
-transition需要触发一个事件 ,而animation在不需要触发任何事件的情况下也可以显式的随着时间变化来改变元 素css的属性值，从而达到一种动画的效果。
+## CSS3中Transform,Transition,Animation的区别
+### Transform：对元素进行变形；
+### Transition：对元素某个属性或多个属性的变化，进行控制（时间等），类似flash的补间动画。但只有两个关键贞。开始，结束。
+### Animation：对元素某个属性或多个属性的变化，进行控制（时间等），类似flash的补间动画。可以设置多个关键贞。
+### Transition与Animation:
+> transition需要触发一个事件 ,而animation在不需要触发任何事件的情况下也可以显式的随着时间变化来改变元 > 素css的属性值，从而达到一种动画的效果。
 
 参考：
 1. <http://www.w3cplus.com/css3/css3-3d-transform.html>
