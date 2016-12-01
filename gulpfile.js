@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 
 gulp.task('run',function(){
-  console.log("ss");
+  gulp.src('./assets/src/default.js')
+      .pipe(gulp.dest('./assets/dist'))
 })
