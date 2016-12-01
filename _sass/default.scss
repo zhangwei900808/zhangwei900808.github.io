@@ -22,6 +22,9 @@ hr{
   background-color: #ddd;
   left: 300px;
   width: auto;
+  .note-footer{
+    @extend .flex-center;
+  }
 }
 
 .flex-center{
