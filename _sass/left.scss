@@ -66,8 +66,10 @@
       left: 0;
       width: 100%;
       a{
-        color:#1756a9;
-        &:hover,&:visited{
+        &:link,&:visited{
+          color:#1756a9;
+        }
+        &:hover{
           color:#2a7ae2;
         }
       }
