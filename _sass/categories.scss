@@ -1,3 +1,7 @@
+.show-out{
+      transform: translate3d(300px,0,0);
+}
+
 .categories{
   width: 300px;
   height: 100%;
@@ -6,4 +10,6 @@
   top: 0;
   z-index: 998;
   padding: 0;
+  background-color: rgba(0,0,0,.5);
+  transition: all .2s ease-in;
 }
