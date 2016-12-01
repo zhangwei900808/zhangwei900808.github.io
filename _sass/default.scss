@@ -88,6 +88,10 @@ hr{
         padding: 10px;
         background-color: #eee;
         border-radius: 50%;
+        &:hover{
+          text-decoration: none;
+          color: #1756a9;
+        }
       }
     }
     .next{
@@ -99,6 +103,10 @@ hr{
         padding: 10px;
         background-color: #eee;
         border-radius: 50%;
+        &:hover{
+          text-decoration: none;
+          color: #1756a9;
+        }
       }
     }
   }

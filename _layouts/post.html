@@ -9,7 +9,7 @@
   <body>
     <section class="blog-container">
       {% include left.html %}
-      <div class="home">
+      <article class="home">
         {{ content }}
 
         <div id="ds-thread" class="ds-thread" data-url="{{ page.url }}" data-title="{{ page.title }}" data-thread-key="{{ page.title }}"></div>
@@ -27,7 +27,7 @@
           })();
           </script>
         <!-- 多说公共JS代码 end -->
-      </div>
+      </article>
       {% include footer.html %}
     </section>
   </body>

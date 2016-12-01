@@ -17,14 +17,6 @@
       <nav class="navbar">
         <a href="http://resume.awbeci.xyz">关于我</a>
       </nav>
-      <div>
-          <h1>随笔分类</h1>
-            {% for category in site.categories %}
-            <ul>
-                <li><a href="{{ site.baseurl}}/category/{{ category.first }}.html">{{category.first}}（{{category.last.size}}）</a></li>
-            </ul>
-            {% endfor %}
-      </div>
       <ul class="list-inline">
         <li>
             <a target="_blank" href="https://www.facebook.com/weiruan.zw">
