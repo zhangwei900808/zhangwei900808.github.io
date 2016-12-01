@@ -1,3 +1,5 @@
 $(function(){
-  console.log(2)
+  $('#showCategories').click(function(e){
+    $('.categories').addClass('show-in');
+  })
 })
