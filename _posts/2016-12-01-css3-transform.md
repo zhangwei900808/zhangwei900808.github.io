@@ -25,7 +25,7 @@ categories: css3
 
 ### Transition与Animation:
 
-> transition需要触发一个事件 ,而animation在不需要触发任何事件的情况下也可以显式的随着时间变化来改变元 > 素css的属性值，从而达到一种动画的效果。
+> transition需要触发一个事件 ,而animation在不需要触发任何事件的情况下也可以显式的随着时间变化来改变元素css的属性值，从而达到一种动画的效果。
 
 参考：
 1. <http://www.w3cplus.com/css3/css3-3d-transform.html>
