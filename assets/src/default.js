@@ -5,7 +5,7 @@ $(function(){
     e.stopPropagation();
   })
 
-  $('.home').click(function(e){
+  $('.blog-container').click(function(e){
     $('.categories').removeClass('show-out');
     $('.home').removeClass('show-out');
   })
