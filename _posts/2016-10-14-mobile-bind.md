@@ -59,6 +59,7 @@ html:
 ```
 
 javascript:
+
 ```js
 $(function() {
 			$('#tel').bind('input propertychange', function() {
@@ -120,4 +121,3 @@ $(function() {
 ![](http://cdn.awbeci.com/images/awbeci-xyz/blog/2016-10-14-mobile-bind-2.png)
 
 ![](http://cdn.awbeci.com/images/awbeci-xyz/blog/2016-10-14-mobile-bind-3.png)
-
