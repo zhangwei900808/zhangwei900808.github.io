@@ -1,11 +1,4 @@
-<!-- <div class="categories">
-  <ul>
-      {% for category in site.categories %}
-          <li><a href="{{ site.baseurl}}/category/{{ category.first }}.html">{{category.first}}（{{category.last.size}}）</a></li>
-      {% endfor %}
-  </ul>
-</div> -->
-<h2> 分类 </h2>
+<div class="categories">
   <ul class="category-list">
       {% for cat in site.categories %}
             {% if cat[0] != page.category %}
@@ -19,3 +12,5 @@
             {% endif %}
       {% endfor %}
   </ul>
+
+</div>
