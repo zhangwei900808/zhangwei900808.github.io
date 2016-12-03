@@ -1,16 +1,7 @@
 <div class="categories">
-  <ul class="category-list">
+  <ul class="sidebar-categories">
       {% for cat in site.categories %}
-            {% if cat[0] != page.category %}
-                <li>
-                <a href="{{ site.baseurl }}/categories/{{ cat[0] }}"> {{ cat[0] }} ({{ cat | last | size}}) </a>
-                </li>
-            {% else %}
-                <li style="background-color: #444">
-                <a href="{{ site.baseurl }}/categories/{{ cat[0] }}"> {{ cat[0] }} ({{ cat | last | size}}) </a>
-                </li>
-            {% endif %}
+      <li>{% categorylink cat[0] %}This is a link to foo{% endcategorylink %}</li>
       {% endfor %}
   </ul>
-
 </div>
