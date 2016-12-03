@@ -357,7 +357,7 @@ hr { margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid #ee
 .left-container footer .nicename a:hover { color: #dd1144; }
 .left-container footer .subname span { color: #999; font-size: 14px; line-height: 25px; }
 .left-container footer .navbar { margin-top: 50px; }
-.left-container footer .navbar a { color: #999; font-size: 12px; line-height: 25px; }
+.left-container footer .navbar a { color: #999; font-size: 12px; line-height: 25px; margin-right: 10px; }
 .left-container footer .navbar a:hover { text-decoration: underline; }
 .left-container footer .list-inline { position: absolute; bottom: 15%; left: 0; width: 100%; }
 .left-container footer .list-inline a:link, .left-container footer .list-inline a:visited { color: #1756a9; }
