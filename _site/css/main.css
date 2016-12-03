@@ -365,5 +365,5 @@ hr { margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid #ee
 
 .show-out { transform: translate3d(300px, 0, 0); }
 
-.categories { width: 300px; height: 100%; position: fixed; left: 0; top: 0; z-index: 998; padding: 0; background-color: rgba(0, 0, 0, 0.5); transition: all .2s ease-in; padding: 20px; }
+.categories { width: 300px; height: 100%; position: fixed; left: 0; top: 0; z-index: 998; padding: 0; background-color: #fff; transition: all .2s ease-in; padding: 20px; }
 .categories ul li a:link, .categories ul li a:visited, .categories ul li a:hover { color: #e5e5e5; text-decoration: none; }
