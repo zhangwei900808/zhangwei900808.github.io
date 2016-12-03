@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-safe: false
+
 title: ZhangWei's Blog
 email: zw900808@gmail.com
 description: > # 学习是一个过程，不能一蹴而就，如果你这样做了，那么你就会感觉到迷茫，因为学习从来就是一个从点到面的过程，如果你突然跳到一个面你会无所适从，
