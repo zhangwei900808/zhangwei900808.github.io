@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Markdown 语法和 MWeb 写作使用说明</title>
+    <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css" media="screen" title="no title">
+  </head>
+  <body>
+    <section class="blog-container">
+      <section class="left-container">
+  <header class="top">
+      <img src="/images/left/QQ20161202-1@2x.png">
+  </header>
+  <footer class="bottom">
+      <div class="avator">
+        <a href="http://www.awbeci.com" target="_blank">
+          <img src="/images/left/zhangwei.jpg" alt="" />
+        </a>
+      </div>
+      <div class="nicename">
+        <a href="http://www.awbeci.xyz">耀一世界的彩</a>
+      </div>
+      <div class="subname">
+        <span>全栈工程师的日常</span>
+      </div>
+      <nav class="navbar">
+        <a href="javascript:;" id="showCategories">标签</a>
+        <span>/</span>
+        <a href="http://resume.awbeci.xyz">关于我i</a>
+      </nav>
+      <ul class="list-inline">
+        <li>
+            <a target="_blank" href="https://www.facebook.com/weiruan.zw">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://twitter.com/zhangwei0808">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="http://weibo.com/waishow">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://github.com/zhangwei900808">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+      </ul>
+  </footer>
+</section>
+
+      <div class="categories">
+  <ul class="sidebar-categories">
+      
+      <li><a href="/blog/category/jekyll/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/update/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/markdown/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/macbook/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/sierra/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/note/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/css3/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/rem/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/audio/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/loadeddata/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/mobile/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/jquery/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/plugin/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/js/index.html">This is a link to foo</a></li>
+      
+  </ul>
+</div>
+
+      <div class="middle">
+      <article class="home">
+        <h1 id="markdown--mweb-">Markdown 语法和 MWeb 写作使用说明</h1>
+
+<h2 id="markdown-">Markdown 的设计哲学</h2>
+
+<blockquote>
+  <p>Markdown 的目標是實現「易讀易寫」。
+不過最需要強調的便是它的可讀性。一份使用 Markdown 格式撰寫的文件應該可以直接以純文字發佈，並且看起來不會像是由許多標籤或是格式指令所構成。
+Markdown 的語法有個主要的目的：用來作為一種網路內容的<em>寫作</em>用語言。</p>
+</blockquote>
+
+<!-- more -->
+
+<h2 id="section">本文约定</h2>
+
+<p>如果有写 <code>效果如下：</code>， 在 MWeb 编辑状态下只有用 <code>CMD + 4</code> 或 <code>CMD + R</code> 预览才可以看效果。</p>
+
+<h2 id="section-1">标题</h2>
+
+<p>Markdown 语法：</p>
+
+<p><code>
+# 第一级标题 `&lt;h1&gt;` 
+## 第二级标题 `&lt;h2&gt;` 
+###### 第六级标题 `&lt;h6&gt;` 
+</code></p>
+
+<p>效果如下：</p>
+
+<h1 id="h1">第一级标题 <code>&lt;h1&gt;</code></h1>
+<p>## 第二级标题 <code>&lt;h2&gt;</code> 
+###### 第六级标题 <code>&lt;h6&gt;</code> </p>
+
+<h2 id="section-2">强调</h2>
+
+<p>Markdown 语法：</p>
+
+<p>```
+<em>这些文字会生成<code>&lt;em&gt;</code></em>
+<em>这些文字会生成<code>&lt;u&gt;</code></em></p>
+
+<p><strong>这些文字会生成<code>&lt;strong&gt;</code></strong>
+<strong>这些文字会生成<code>&lt;strong&gt;</code></strong>
+```</p>
+
+<p>在 MWeb 中的快捷键为： <code>CMD + U</code>、<code>CMD + I</code>、<code>CMD + B</code>
+效果如下：</p>
+
+<p><em>这些文字会生成<code>&lt;em&gt;</code></em>
+<em>这些文字会生成<code>&lt;u&gt;</code></em></p>
+
+<p><strong>这些文字会生成<code>&lt;strong&gt;</code></strong>
+<strong>这些文字会生成<code>&lt;strong&gt;</code></strong></p>
+
+<h2 id="section-3">换行</h2>
+
+<p>四个及以上空格加回车。
+如果不想打这么多空格，只要回车就为换行，请勾选：<code>Preferences</code> - <code>Themes</code> - <code>Translate newlines to &lt;br&gt; tags</code></p>
+
+<h2 id="section-4">列表</h2>
+
+<h3 id="section-5">无序列表</h3>
+
+<p>Markdown 语法：</p>
+
+<p><code>
+* 项目一 无序列表 `* + 空格键`
+* 项目二
+* 项目二的子项目一 无序列表 `TAB + * + 空格键`
+* 项目二的子项目二
+</code></p>
+
+<p>在 MWeb 中的快捷键为： <code>Option + U</code>
+效果如下：</p>
+
+<ul>
+  <li>项目一 无序列表 <code>* + 空格键</code></li>
+  <li>项目二</li>
+  <li>项目二的子项目一 无序列表 <code>TAB + * + 空格键</code></li>
+  <li>项目二的子项目二</li>
+</ul>
+
+<h3 id="section-6">有序列表</h3>
+
+<p>Markdown 语法：</p>
+
+<p><code>
+1. 项目一 有序列表 `数字 + . + 空格键`
+2. 项目二 
+3. 项目三
+1. 项目三的子项目一 有序列表 `TAB + 数字 + . + 空格键`
+2. 项目三的子项目二
+</code></p>
+
+<p>效果如下：</p>
+
+<ol>
+  <li>项目一 有序列表 <code>数字 + . + 空格键</code></li>
+  <li>项目二 </li>
+  <li>项目三</li>
+  <li>项目三的子项目一 有序列表 <code>TAB + 数字 + . + 空格键</code></li>
+  <li>项目三的子项目二</li>
+</ol>
+
+<h3 id="task-lists">任务列表（Task lists）</h3>
+
+<p>Markdown 语法：</p>
+
+<p><code>
+- [ ] 任务一 未做任务 `- + 空格 + [ ]`
+- [x] 任务二 已做任务 `- + 空格 + [x]`
+</code></p>
+
+<p>效果如下：</p>
+
+<ul>
+  <li>[ ] 任务一 未做任务 <code>- + 空格 + [ ]</code></li>
+  <li>[x] 任务二 已做任务 <code>- + 空格 + [x]</code></li>
+</ul>
+
+<h2 id="section-7">图片</h2>
+
+<p>Markdown 语法：</p>
+
+<p><code>
+![GitHub set up](http://zh.mweb.im/asset/img/set-up-git.gif)
+格式: ![Alt Text](url)
+</code></p>
+
+<p><code>Control + Shift + I</code> 可插入Markdown语法。
+如果是 MWeb 的文档库中的文档，还可以用拖放图片、<code>CMD + V</code> 粘贴、<code>CMD + Option + I</code> 导入这三种方式来增加图片。
+效果如下：</p>
+
+<p><img src="http://zh.mweb.im/asset/img/set-up-git.gif" alt="GitHub set up" /></p>
+
+<p>MWeb 引入的特别的语法来设置图片宽度，方法是在图片描述后加 <code>-w + 图片宽度</code> 即可，比如说要设置上面的图片的宽度为 140，语法如下：</p>
+
+<p><img src="http://zh.mweb.im/asset/img/set-up-git.gif" alt="GitHub set up-w140" /></p>
+
+<h2 id="section-8">链接</h2>
+
+<p>Markdown 语法：</p>
+
+<p><code>
+email &lt;example@example.com&gt;
+[GitHub](http://github.com)
+自动生成连接  &lt;http://www.github.com/&gt;
+</code></p>
+
+<p><code>Control + Shift + L</code> 可插入Markdown语法。
+如果是 MWeb 的文档库中的文档，拖放或<code>CMD + Option + I</code> 导入非图片时，会生成连接。
+效果如下：</p>
+
+<p>Email 连接： <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#101;&#120;&#097;&#109;&#112;&#108;&#101;&#064;&#101;&#120;&#097;&#109;&#112;&#108;&#101;&#046;&#099;&#111;&#109;">&#101;&#120;&#097;&#109;&#112;&#108;&#101;&#064;&#101;&#120;&#097;&#109;&#112;&#108;&#101;&#046;&#099;&#111;&#109;</a>
+<a href="http://github.com">连接标题Github网站</a>
+自动生成连接像： <a href="http://www.github.com/">http://www.github.com/</a> 这样</p>
+
+<h2 id="section-9">区块引用</h2>
+
+<p>Markdown 语法：</p>
+
+<p><code>
+某某说:
+&gt; 第一行引用
+&gt; 第二行费用文字
+</code></p>
+
+<p><code>CMD + Shift + B</code> 可插入Markdown语法。
+效果如下：</p>
+
+<p>某某说:
+&gt; 第一行引用
+&gt; 第二行费用文字</p>
+
+<h2 id="section-10">行内代码</h2>
+
+<p>Markdown 语法：</p>
+
+<p><code>
+像这样即可：`&lt;addr&gt;` `code`
+</code></p>
+
+<p><code>CMD + K</code> 可插入Markdown语法。
+效果如下：</p>
+
+<p>像这样即可：<code>&lt;addr&gt;</code> <code>code</code></p>
+
+<h2 id="section-11">多行或者一段代码</h2>
+
+<p>Markdown 语法：</p>
+
+<pre><code>```js
+function fancyAlert(arg) {
+    if(arg) {
+    $.facebox({div:'#foo'})
+    }
+
+}
+```
+</code></pre>
+
+<p><code>CMD + Shift + K</code> 可插入Markdown语法。
+效果如下：</p>
+
+<p>```js
+function fancyAlert(arg) {
+    if(arg) {
+    $.facebox({div:’#foo’})
+    }</p>
+
+<p>}
+```</p>
+
+<h2 id="section-12">顺序图或流程图</h2>
+
+<p>Markdown 语法：</p>
+
+<pre><code>```sequence
+张三-&gt;李四: 嘿，小四儿, 写博客了没?
+Note right of 李四: 李四愣了一下，说：
+李四--&gt;张三: 忙得吐血，哪有时间写。
+```
+
+```flow
+st=&gt;start: 开始
+e=&gt;end: 结束
+op=&gt;operation: 我的操作
+cond=&gt;condition: 确认？
+
+st-&gt;op-&gt;cond
+cond(yes)-&gt;e
+cond(no)-&gt;op
+```
+</code></pre>
+
+<p>效果如下（ <code>Preferences</code> - <code>Themes</code> - <code>Enable sequence &amp; flow chart</code> 才会看到效果 ）：</p>
+
+<p><code>sequence
+张三-&gt;李四: 嘿，小四儿, 写博客了没?
+Note right of 李四: 李四愣了一下，说：
+李四--&gt;张三: 忙得吐血，哪有时间写。
+</code></p>
+
+<p>```flow
+st=&gt;start: 开始
+e=&gt;end: 结束
+op=&gt;operation: 我的操作
+cond=&gt;condition: 确认？</p>
+
+<p>st-&gt;op-&gt;cond
+cond(yes)-&gt;e
+cond(no)-&gt;op
+```</p>
+
+<p>更多请参考：<a href="http://bramp.github.io/js-sequence-diagrams/">http://bramp.github.io/js-sequence-diagrams/</a>, <a href="http://adrai.github.io/flowchart.js/">http://adrai.github.io/flowchart.js/</a></p>
+
+<h2 id="section-13">表格</h2>
+
+<p>Markdown 语法：</p>
+
+<p><code>
+第一格表头 | 第二格表头
+--------- | -------------
+内容单元格 第一列第一格 | 内容单元格第二列第一格
+内容单元格 第一列第二格 多加文字 | 内容单元格第二列第二格
+</code></p>
+
+<p>效果如下：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>第一格表头</th>
+      <th>第二格表头</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>内容单元格 第一列第一格</td>
+      <td>内容单元格第二列第一格</td>
+    </tr>
+    <tr>
+      <td>内容单元格 第一列第二格 多加文字</td>
+      <td>内容单元格第二列第二格</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="section-14">删除线</h2>
+
+<p>Markdown 语法：</p>
+
+<p>加删除线像这样用： ~~删除这些~~</p>
+
+<p>效果如下：</p>
+
+<p>加删除线像这样用： ~~删除这些~~</p>
+
+<h2 id="section-15">分隔线</h2>
+
+<p>以下三种方式都可以生成分隔线：</p>
+
+<p>```
+***</p>
+
+<hr />
+
+<hr />
+<p>```</p>
+
+<p>效果如下：</p>
+
+<hr />
+
+<hr />
+
+<hr />
+
+<h2 id="mathjax">MathJax</h2>
+
+<p>Markdown 语法：</p>
+
+<p>```
+块级公式：
+<script type="math/tex">	x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} </script></p>
+
+<p>\[ \frac{1}{\Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{\frac25 \pi}} =
+1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}}
+{1+\frac{e^{-8\pi}} {1+\ldots} } } } \]</p>
+
+<p>行内公式： $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$
+```</p>
+
+<p>效果如下（<code>Preferences</code> - <code>Themes</code> - <code>Enable MathJax</code> 才会看到效果）：</p>
+
+<p>块级公式：
+<script type="math/tex">	x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} </script></p>
+
+<p>\[ \frac{1}{\Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{\frac25 \pi}} =
+1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}}
+{1+\frac{e^{-8\pi}} {1+\ldots} } } } \]</p>
+
+<p>行内公式： $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$</p>
+
+<h2 id="footnote">脚注（Footnote）</h2>
+
+<p>Markdown 语法：</p>
+
+<p><code>
+这是一个脚注：[^sample_footnote]
+</code></p>
+
+<p>效果如下：</p>
+
+<p>这是一个脚注：<sup id="fnref:sample_footnote"><a href="#fn:sample_footnote" class="footnote">1</a></sup></p>
+
+<h2 id="section-16">注释和阅读更多</h2>
+
+<!-- comment -->
+<!-- more -->
+
+<p>Actions-&gt;Insert Read More Comment <em>或者</em> <code>Command + .</code>
+<strong>注</strong> 阅读更多的功能只用在生成网站或博客时，插入时注意要后空一行。</p>
+
+<h2 id="toc">TOC</h2>
+
+<p>Markdown 语法：</p>
+
+<p><code>
+[TOC]
+</code></p>
+
+<p>效果如下：</p>
+
+<p>[TOC]</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:sample_footnote">
+      <p>这里是脚注信息 <a href="#fnref:sample_footnote" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+
+        <div id="ds-thread" class="ds-thread" data-url="/markdown/2016/10/06/markdown-syntax.html" data-title="Markdown 语法和 MWeb 写作使用说明" data-thread-key="Markdown 语法和 MWeb 写作使用说明"></div>
+        <!-- 多说评论框 end -->
+        <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+        <script type="text/javascript">
+        var duoshuoQuery = {short_name:"zw900808"};
+          (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0]
+             || document.getElementsByTagName('body')[0]).appendChild(ds);
+          })();
+          </script>
+        <!-- 多说公共JS代码 end -->
+      </article>
+      </div>
+      <div class="note-footer">
+  <span>Copyright © zhangwei Blog 2016 </span>
+</div>
+
+      <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+      <script src="/assets/dist/default.js" charset="utf-8"></script>
+    </section>
+  </body>
+</html>

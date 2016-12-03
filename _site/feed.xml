@@ -1,0 +1,1143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ZhangWei&#39;s Blog</title>
+    <description>因为你会发现你站着的面没有一个点来支撑你，最终你会徒劳无获。真正的做法应该是学习一个个知识点，当你了解的知识点已经非常多的时候你就发现你的知识面已经形成，这时候 你站在这个面上你能感觉到管中窥豹，一揽众山小的感觉，而这个过程需要时间的长期积累。为什么有些人就能成功而你不行？因为他的时间都拿来学习这一个个的知识点， 所以他能很快形成知识面，所以就有句俗话说：时间就是金钱。想必也是这样来的。
+</description>
+    <link>http://awbeci.xyz/</link>
+    <atom:link href="http://awbeci.xyz/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 03 Dec 2016 14:39:28 +0800</pubDate>
+    <lastBuildDate>Sat, 03 Dec 2016 14:39:28 +0800</lastBuildDate>
+    <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>transition结合transform制作出3D效果</title>
+        <description>&lt;p&gt;今天看到看到网上一个&lt;a href=&quot;http://imhaoran.wang/&quot;&gt;博客&lt;/a&gt;，上面有个功能特别吸引我，就是点击链接会展开一个侧边栏，而那个侧边栏有动画效果，当然你也可以通过jquery来做，不过有CSS3不用jquery也可以。&lt;/p&gt;
+
+&lt;p&gt;下面这段代码你们可以试试：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;js
+    transform: translate3d(300px,0,0);
+    transition: all .2s ease-in;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;css3transformtransitionanimation&quot;&gt;CSS3中Transform,Transition,Animation的区别&lt;/h2&gt;
+
+&lt;h3 id=&quot;transform&quot;&gt;Transform：对元素进行变形；&lt;/h3&gt;
+
+&lt;h3 id=&quot;transitionflash&quot;&gt;Transition：对元素某个属性或多个属性的变化，进行控制（时间等），类似flash的补间动画。但只有两个关键贞。开始，结束。&lt;/h3&gt;
+
+&lt;h3 id=&quot;animationflash&quot;&gt;Animation：对元素某个属性或多个属性的变化，进行控制（时间等），类似flash的补间动画。可以设置多个关键贞。&lt;/h3&gt;
+
+&lt;h3 id=&quot;transitionanimation&quot;&gt;Transition与Animation:&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;transition需要触发一个事件 ,而animation在不需要触发任何事件的情况下也可以显式的随着时间变化来改变元素css的属性值，从而达到一种动画的效果。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;参考：
+1. &lt;a href=&quot;http://www.w3cplus.com/css3/css3-3d-transform.html&quot;&gt;http://www.w3cplus.com/css3/css3-3d-transform.html&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 01 Dec 2016 11:20:00 +0800</pubDate>
+        <link>http://awbeci.xyz/css3/2016/12/01/css3-transform.html</link>
+        <guid isPermaLink="true">http://awbeci.xyz/css3/2016/12/01/css3-transform.html</guid>
+        
+        
+        <category>css3</category>
+        
+      </item>
+    
+      <item>
+        <title>js根据秒数显示指定格式的字符串</title>
+        <description>&lt;h4 id=&quot;js&quot;&gt;公司开发过程中，遇到好多公用的js，比如这个,根据秒数显示指定格式的字符串，以备日后使用。&lt;/h4&gt;
+
+&lt;p&gt;```js
+function formatSeconds(value) {
+	var second = parseInt(value);// 秒
+	var minute = 0;// 分
+	var hour = 0;// 时
+	if (second &amp;gt; 60) {
+		minute = parseInt(second / 60);
+		second = parseInt(second % 60);
+		if (minute &amp;gt; 60) {
+			hour = parseInt(minute / 60);
+			minute = parseInt(minute % 60);
+		}
+	} else {
+		if (second &amp;lt; 10) {
+			return “00:0” + second;
+		} else {
+			return “00:” + second;
+		}
+	}&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var result;
+if (hour &amp;gt; 0) {
+	if (second &amp;lt; 10) {
+		second = &quot;0&quot; + second;
+	}
+	if (minute &amp;lt; 10) {
+		minute = &quot;0&quot; + minute;
+	}
+	result = hour + &quot; : &quot; + minute + &quot; : &quot; + second;
+	return result;
+}
+if (minute &amp;gt; 0) {
+	if (second &amp;lt; 10) {
+		second = &quot;0&quot; + second;
+	}
+	if (minute &amp;lt; 10) {
+		minute = &quot;0&quot; + minute;
+	}
+	return result = minute + &quot; : &quot; + second;
+}
+if (second &amp;lt; 10) {
+	second = &quot;0&quot; + second;
+}
+return second; } ```
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cdn.awbeci.com/images/awbeci-xyz/blog/2016-10-14-js-date-format.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 14 Oct 2016 11:33:00 +0800</pubDate>
+        <link>http://awbeci.xyz/js/2016/10/14/show-date-format.html</link>
+        <guid isPermaLink="true">http://awbeci.xyz/js/2016/10/14/show-date-format.html</guid>
+        
+        
+        <category>js</category>
+        
+      </item>
+    
+      <item>
+        <title>如何制作jquery插件</title>
+        <description>&lt;h3 id=&quot;jquery&quot;&gt;这里有段jquery插件的典型代码，可以参考一下：&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;js
+;(function($,window,document,undefined){
+    //我们的代码。。
+    //blah blah blah...
+})(jQuery,window,document);
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;再详细一点的代码：&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;js
+;(function($, window, document,undefined) {
+    //定义Beautifier的构造函数
+    var Beautifier = function(ele, opt) {
+        this.$element = ele,
+        this.defaults = {
+            &#39;color&#39;: &#39;red&#39;,
+            &#39;fontSize&#39;: &#39;12px&#39;,
+            &#39;textDecoration&#39;: &#39;none&#39;
+        },
+        this.options = $.extend({}, this.defaults, opt)
+    }
+    //定义Beautifier的方法
+    Beautifier.prototype = {
+        beautify: function() {
+            return this.$element.css({
+                &#39;color&#39;: this.options.color,
+                &#39;fontSize&#39;: this.options.fontSize,
+                &#39;textDecoration&#39;: this.options.textDecoration
+            });
+        }
+    }
+    //在插件中使用Beautifier对象
+    $.fn.myPlugin = function(options) {
+        //创建Beautifier的实体
+        var beautifier = new Beautifier(this, options);
+        //调用其方法
+        return beautifier.beautify();
+    }
+})(jQuery, window, document);
+&lt;/code&gt;
+参考地址：&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/Wayou/p/jquery_plugin_tutorial.html&quot;&gt;http://www.cnblogs.com/Wayou/p/jquery_plugin_tutorial.html&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 14 Oct 2016 10:56:00 +0800</pubDate>
+        <link>http://awbeci.xyz/jquery/plugin/2016/10/14/how-to-do-jquery-plugin.html</link>
+        <guid isPermaLink="true">http://awbeci.xyz/jquery/plugin/2016/10/14/how-to-do-jquery-plugin.html</guid>
+        
+        
+        <category>jquery</category>
+        
+        <category>plugin</category>
+        
+      </item>
+    
+      <item>
+        <title>移动端绑定手机页面</title>
+        <description>&lt;h3 id=&quot;section&quot;&gt;写这个博客的目的就是为了以后如果遇到相同的需求可以直播复制这段代码。&lt;/h3&gt;
+&lt;p&gt;html:&lt;/p&gt;
+
+&lt;p&gt;```html
+&amp;lt;!DOCTYPE html&amp;gt;&lt;/p&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot; /&gt;
+&lt;meta charset=&quot;utf-8&quot; /&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+&lt;meta name=&quot;description&quot; content=&quot;&quot; /&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;&quot; /&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot; /&gt;
+&lt;meta name=&quot;renderer&quot; content=&quot;webkit&quot; /&gt;
+&lt;meta http-equiv=&quot;Cache-Control&quot; content=&quot;no-siteapp&quot; /&gt;
+&lt;title&gt;故事包&lt;/title&gt;
+&lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; href=&quot;/resources/img/md_a1.png&quot; /&gt;
+&lt;link href=&quot;//cdn.bootcss.com/weui/0.4.3/style/weui.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
+&lt;link href=&quot;//cdn.bootcss.com/jquery-weui/0.8.1/css/jquery-weui.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/resources/css/mobileBind.css&quot; media=&quot;screen&quot; title=&quot;no title&quot; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;header class=&quot;logo&quot;&gt;
+		&lt;img src=&quot;/resources/img/md_logo_84X37.png&quot; /&gt;
+	&lt;/header&gt;
+	&lt;div class=&quot;weui_cells weui_cells_form&quot;&gt;
+		&lt;div class=&quot;weui_cell&quot;&gt;
+			&lt;div class=&quot;weui_cell_hd&quot;&gt;
+				&lt;label class=&quot;weui_label&quot;&gt;手机号&lt;/label&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;weui_cell_bd weui_cell_primary&quot;&gt;
+				&lt;input id=&quot;tel&quot; class=&quot;weui_input&quot; type=&quot;number&quot; placeholder=&quot;请输入手机号&quot; /&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;weui_cell&quot;&gt;
+			&lt;div class=&quot;weui_cell_hd&quot;&gt;
+				&lt;label class=&quot;weui_label&quot;&gt;验证码&lt;/label&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;weui_cell_bd weui_cell_primary&quot;&gt;
+				&lt;input class=&quot;weui_input&quot; type=&quot;number&quot; placeholder=&quot;请输入验证码&quot; /&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;weui_cell_ft&quot;&gt;
+				&lt;a id=&quot;getCode&quot; href=&quot;javascript:;&quot; class=&quot;weui_btn weui_btn_mini weui_btn_warn&quot;&gt;获取验证码&lt;/a&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;footer&gt;
+		&lt;a href=&quot;javascript:;&quot; class=&quot;weui_btn weui_btn_primary&quot;&gt;完成&lt;/a&gt;
+	&lt;/footer&gt;
+	&lt;script src=&quot;//cdn.bootcss.com/jquery/2.2.4/jquery.min.js&quot;&gt;&lt;/script&gt;
+	&lt;script src=&quot;//cdn.bootcss.com/jquery-weui/0.8.1/js/jquery-weui.min.js&quot;&gt;&lt;/script&gt;
+```
+
+javascript:
+
+```js
+$(function() {
+			$(&#39;#tel&#39;).bind(&#39;input propertychange&#39;, function() {
+				var this$ = $(this);
+				/*if (this$.val().trim().length == 0) {
+				this$.val(&#39;&#39;);
+				$.alert(&quot;手机号码有误，请重填&quot;, &quot;提示&quot;);
+				return false;
+				} */
+				if (this$.val().length &amp;lt; 11) {
+
+				} else if (this$.val().length == 11) {
+					if (!(/^1[34578]\d{9}$/.test(this$.val()))) {
+						$.alert(&quot;手机号码有误，请重填&quot;, &quot;提示&quot;);
+						this$.val(&#39;&#39;);
+						return false;
+					}
+				} else if (this$.val().length &amp;gt; 11) {
+					$.alert(&quot;手机号码有误，请重填&quot;, &quot;提示&quot;);
+					this$.val(&#39;&#39;);
+					return false;
+				}
+			});
+
+			//获取验证码状态
+			var state = &quot;no-get&quot;;
+			$(&#39;#getCode&#39;).on(&#39;click&#39;, function(e) {
+				if (!(/^1[34578]\d{9}$/.test($(&#39;#tel&#39;).val()))) {
+					$.alert(&quot;手机号码有误，请重填&quot;, &quot;提示&quot;);
+					$(&#39;#tel&#39;).val(&#39;&#39;);
+					return false;
+				}
+				if (state == &quot;no-get&quot;) {
+					var $this = $(this);
+					var time = 60;//60秒后再次获取
+					var clrTime = setInterval(function() {
+						var txtTime = --time;
+						if (txtTime == 0) {
+							clearInterval(clrTime);
+							$this.text(&#39;重新获取&#39;);
+							state = &quot;no-get&quot;
+						} else {
+							$this.text(txtTime + &#39;S后获取&#39;);
+							state = &quot;geting&quot;;
+						}
+					}, 1000);
+				}
+			})
+		})
+
+		function isNumber(val) {
+			var strRegex = /^[0-9]*[1-9][0-9]*$/;
+			return strRegex.test(val);
+		}
+```
+
+![](http://cdn.awbeci.com/images/awbeci-xyz/blog/2016-10-14-mobile-bind-1.png)
+
+![](http://cdn.awbeci.com/images/awbeci-xyz/blog/2016-10-14-mobile-bind-2.png)
+
+![](http://cdn.awbeci.com/images/awbeci-xyz/blog/2016-10-14-mobile-bind-3.png)
+&lt;/body&gt;&lt;/html&gt;
+</description>
+        <pubDate>Fri, 14 Oct 2016 09:35:00 +0800</pubDate>
+        <link>http://awbeci.xyz/mobile/2016/10/14/mobile-bind.html</link>
+        <guid isPermaLink="true">http://awbeci.xyz/mobile/2016/10/14/mobile-bind.html</guid>
+        
+        
+        <category>mobile</category>
+        
+      </item>
+    
+      <item>
+        <title>Html5 Audio事件loadeddata和addEventLister之间的特殊关系</title>
+        <description>&lt;h4 id=&quot;audioaddeventlistenerloadeddataaudio-dataaddeventlistener&quot;&gt;今天在项目中遇到一个很奇怪地问题，audio在页面上已经初始化好了，但是使用addEventListener添加loadeddata的时候进行测试，只有偶尔才进入这个事件里面，郁闷很久，找不出是什么原因，然后我分析了一下：可能是因为audio data已经在执行addEventListener之前已经加载数据了，那么添加这个事件也就没有意义了。之后我通过以下方法来验证我的观点：&lt;/h4&gt;
+
+&lt;h4 id=&quot;audiojsaudio-domloadeddatachromedebug&quot;&gt;1、页面上去掉audio标签，然后，在js中构造一个audio Dom标签，然后给这个标签监听loadeddata事件，最后就是在Chrome上debug，通过测试发现，每次都进入这个事件了，因此，正如我上面分析的，一定要在数据加载之前监听这个事件，否则就没有意义！！！&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://cdn.awbeci.com/images/awbeci-xyz/blog/2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;参考：&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://acplayer.awbeci.xyz&quot;&gt;http://acplayer.awbeci.xyz&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/zhangwei900808/AcPlayer&quot;&gt;https://github.com/zhangwei900808/AcPlayer&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 13 Oct 2016 21:13:00 +0800</pubDate>
+        <link>http://awbeci.xyz/audio/loadeddata/2016/10/13/audio-loadeddata.html</link>
+        <guid isPermaLink="true">http://awbeci.xyz/audio/loadeddata/2016/10/13/audio-loadeddata.html</guid>
+        
+        
+        <category>audio</category>
+        
+        <category>loadeddata</category>
+        
+      </item>
+    
+      <item>
+        <title>学习CSS3特性REM</title>
+        <description>&lt;p&gt;最近项目中要做微信端网页开发，但是要做适屏，因为iphone4，5，6的屏幕有大有小，所以不同浏览器预览的效果也不一样，那怎样才能达到不同屏幕显示的效果也一样呢，
+这个时候我们就要用到CSS3的rem特性，首先让我们认识一下到底REM是干嘛用的？以及如何来使用？&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;简介：&lt;/h2&gt;
+&lt;p&gt;REM是相对单位，是相对HTML根元素。
+这个单位可谓集相对大小和绝对大小的优点于一身，通过它既可以做到只修改根元素就成比例地调整所有字体大小，又可以避免字体大小逐层复合的连锁反应。
+目前，除了IE8及更早版本外，所有浏览器均已支持rem。&lt;/p&gt;
+
+&lt;p&gt;下面这段代码是我应用到项目中的CSS:&lt;/p&gt;
+
+&lt;p&gt;```css
+  @media only screen and (min-width: 320px){
+  html {
+      font-size: 10px !important;/&lt;em&gt;10 ÷ 16 × 100% = 62.5%&lt;/em&gt;/
+  }
+}&lt;/p&gt;
+
+&lt;p&gt;@media only screen and (min-width: 370px){
+    html {
+        font-size:13px !important;
+    }
+}
+@media only screen and (min-width: 410px){
+    html {
+        font-size: 16px !important;
+    }
+}
+@media only screen and (min-width: 481px){
+    html {
+        font-size: 23px !important;
+    }
+}&lt;/p&gt;
+
+&lt;p&gt;body{
+  font-family: ‘黑体’;
+  background-color: #f8f8f8;
+  letter-spacing: -1px;
+}
+ul{
+  display:inline-block;
+  margin:0;
+  padding:0;
+}
+ul li{
+  float:left;
+  list-style: none;
+}
+a:visited{
+  color:#0E0E0E;
+}
+.weui_search_bar{
+  background-color: #fff;
+}
+.weui_search_outer{
+  background-color: #fff;
+}
+.weui_search_outer:after{
+  border: none;
+}
+.swiper-slide&amp;gt;img {
+    width: 100%;
+}
+.navbar{&lt;/p&gt;
+
+&lt;p&gt;}
+.navbar ul{
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar ul li{
+  width: 20%;
+}
+.navbar ul li a{
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.navbar ul li:nth-child(6+n){
+  margin-top: 10px;
+}
+.navbar ul li img{
+      width: 3.9rem;
+}
+.navbar ul li a .type{
+  font-size: 1.1rem;
+  padding:3px 0;
+}
+/&lt;em&gt;wonderful-recommend&lt;/em&gt;/
+.common-content{
+      padding: 0 10px;
+      margin-top: 15px;
+}
+.common-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 1.2rem;
+  padding-bottom:10px;
+  border-bottom: 1px solid #EFF0F0;
+}&lt;/p&gt;
+
+&lt;p&gt;.common-header .left{
+  display: flex;
+  align-items: center;
+}
+.common-header .left img{
+      width: 1.2rem;
+}
+.common-header .left .title{
+  margin-left:5px;
+  font-size: 1.2rem;
+}
+.common-header .right{
+  display: inline-block;
+}
+.common-header .right .more{
+  color:#FF4B00;
+  font-size: 1rem;
+}
+.wonderful-recommend{
+  margin-top: 20px;
+}
+.wonderful-recommend .list{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 .5rem;
+}&lt;/p&gt;
+
+&lt;p&gt;.wonderful-recommend .list li{
+      width: 33%;
+      margin-top: 15px;
+}
+.wonderful-recommend .list li a{
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+}
+.wonderful-recommend .list li a img{
+      width: 90%;
+}
+.wonderful-recommend .list li a .name{
+  font-size: 1rem;
+  width: 85%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  padding: 5px 0;
+}&lt;/p&gt;
+
+&lt;p&gt;.wonderful-recommend .list li a .bottom{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wonderful-recommend .list li a .bottom img{
+      width: .5rem;
+}
+.wonderful-recommend .list li a .bottom .view-count{
+  color: #808080;
+  font-size: 1rem;
+  margin-left: 5px;
+  letter-spacing: normal;
+}&lt;/p&gt;
+
+&lt;p&gt;/&lt;em&gt;album-recommend&lt;/em&gt;/
+.album-recommend{
+  margin-top: 20px;
+}
+.album-recommend .common-header{
+  border: none;
+}&lt;/p&gt;
+
+&lt;p&gt;.album-recommend .list{
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 1.2rem;
+}&lt;/p&gt;
+
+&lt;p&gt;.album-recommend .list li{
+  width: 47%;
+  margin-bottom: 10px;
+}&lt;/p&gt;
+
+&lt;p&gt;.album-recommend .list li a{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #E1E1E1;
+  padding: 6px;
+  border-radius: 2px;
+}&lt;/p&gt;
+
+&lt;p&gt;.album-recommend .list li a img{
+  width:100%;
+}&lt;/p&gt;
+
+&lt;p&gt;.album-recommend .list li a .name{
+  font-size: 1.1rem;
+  letter-spacing: -1px;
+}
+/&lt;em&gt;support-commodity&lt;/em&gt;/
+.support-commodity{
+  margin-top: 15px;
+}
+.support-commodity .common-header{
+  border: none;
+}&lt;/p&gt;
+
+&lt;p&gt;.support-commodity .list{
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 1.2rem;
+}&lt;/p&gt;
+
+&lt;p&gt;.support-commodity .list li{
+  width: 47.8%;
+  margin-bottom: 10px;
+}&lt;/p&gt;
+
+&lt;p&gt;.support-commodity .list li a{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #F0F0F0;
+  padding: 7px;
+  border-radius: 2px;
+}&lt;/p&gt;
+
+&lt;p&gt;.support-commodity .list li a img{
+  width:100%;
+}&lt;/p&gt;
+
+&lt;p&gt;.support-commodity .list li a .name{
+  font-size: 1rem;
+  padding-top: 3px;
+}&lt;/p&gt;
+
+&lt;p&gt;.support-commodity .list li a .price-content{
+  font-size: 1rem;
+  display: flex;
+  color: #FF0000;
+  align-items: center;
+}&lt;/p&gt;
+
+&lt;p&gt;/&lt;em&gt;footer&lt;/em&gt;/
+footer{
+    border-top: 1px solid #E0E0E0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}&lt;/p&gt;
+
+&lt;p&gt;footer a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: 50%;
+}
+footer a:first-child{
+  border-right: 1px solid #e0e0e0;
+}
+footer a img{
+  width:1.4rem;
+}
+footer a .title{
+  color:#499D11;
+  font-size: 1.2rem;
+  margin-left: 5px;
+}&lt;/p&gt;
+
+&lt;p&gt;```
+参考地址：&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.w3cplus.com/css3/define-font-size-with-css3-rem&quot;&gt;http://www.w3cplus.com/css3/define-font-size-with-css3-rem&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://isux.tencent.com/web-app-rem.html&quot;&gt;http://isux.tencent.com/web-app-rem.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.w3cplus.com/preprocessor/sass-px-to-rem-with-mixin-and-function.html&quot;&gt;http://www.w3cplus.com/preprocessor/sass-px-to-rem-with-mixin-and-function.html&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 09 Oct 2016 16:44:00 +0800</pubDate>
+        <link>http://awbeci.xyz/css3/rem/2016/10/09/css3-rem.html</link>
+        <guid isPermaLink="true">http://awbeci.xyz/css3/rem/2016/10/09/css3-rem.html</guid>
+        
+        
+        <category>css3</category>
+        
+        <category>rem</category>
+        
+      </item>
+    
+      <item>
+        <title>解决macos sierra 备忘录崩溃问题</title>
+        <description>&lt;p&gt;最近升级了macos sierra 10.12，使用效果还不错，但是在使用备忘录的过程中出现了一个bug，如图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.awbeci.xyz/images/2016/10/07/macos-sierra-note/1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;于是我到打电话给Apple客服，客服要我重新添加一个用户然后转到这个新用户上面，因为老账户上面有好多资料，所以我不同意，然后跟他说我自己解决，然后到网上找，终于找到方法了：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+&amp;gt; 在icloud设置里面取消同步备忘录然后再重新勾选上，再次打开备忘录后，备忘录会重新从icloud里同步，然后貌似就好了。
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;参考地址：&lt;a href=&quot;http://bbs.feng.com/read-htm-tid-10808928.html&quot;&gt;http://bbs.feng.com/read-htm-tid-10808928.html&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 07 Oct 2016 19:28:00 +0800</pubDate>
+        <link>http://awbeci.xyz/macbook/sierra/note/2016/10/07/macos-sierra-note.html</link>
+        <guid isPermaLink="true">http://awbeci.xyz/macbook/sierra/note/2016/10/07/macos-sierra-note.html</guid>
+        
+        
+        <category>macbook</category>
+        
+        <category>sierra</category>
+        
+        <category>note</category>
+        
+      </item>
+    
+      <item>
+        <title>Markdown 语法和 MWeb 写作使用说明</title>
+        <description>&lt;h1 id=&quot;markdown--mweb-&quot;&gt;Markdown 语法和 MWeb 写作使用说明&lt;/h1&gt;
+
+&lt;h2 id=&quot;markdown-&quot;&gt;Markdown 的设计哲学&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Markdown 的目標是實現「易讀易寫」。
+不過最需要強調的便是它的可讀性。一份使用 Markdown 格式撰寫的文件應該可以直接以純文字發佈，並且看起來不會像是由許多標籤或是格式指令所構成。
+Markdown 的語法有個主要的目的：用來作為一種網路內容的&lt;em&gt;寫作&lt;/em&gt;用語言。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;本文约定&lt;/h2&gt;
+
+&lt;p&gt;如果有写 &lt;code&gt;效果如下：&lt;/code&gt;， 在 MWeb 编辑状态下只有用 &lt;code&gt;CMD + 4&lt;/code&gt; 或 &lt;code&gt;CMD + R&lt;/code&gt; 预览才可以看效果。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;标题&lt;/h2&gt;
+
+&lt;p&gt;Markdown 语法：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+# 第一级标题 `&amp;lt;h1&amp;gt;` 
+## 第二级标题 `&amp;lt;h2&amp;gt;` 
+###### 第六级标题 `&amp;lt;h6&amp;gt;` 
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;效果如下：&lt;/p&gt;
+
+&lt;h1 id=&quot;h1&quot;&gt;第一级标题 &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;## 第二级标题 &lt;code&gt;&amp;lt;h2&amp;gt;&lt;/code&gt; 
+###### 第六级标题 &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; &lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;强调&lt;/h2&gt;
+
+&lt;p&gt;Markdown 语法：&lt;/p&gt;
+
+&lt;p&gt;```
+&lt;em&gt;这些文字会生成&lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt;&lt;/em&gt;
+&lt;em&gt;这些文字会生成&lt;code&gt;&amp;lt;u&amp;gt;&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;这些文字会生成&lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;&lt;/strong&gt;
+&lt;strong&gt;这些文字会生成&lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;&lt;/strong&gt;
+```&lt;/p&gt;
+
+&lt;p&gt;在 MWeb 中的快捷键为： &lt;code&gt;CMD + U&lt;/code&gt;、&lt;code&gt;CMD + I&lt;/code&gt;、&lt;code&gt;CMD + B&lt;/code&gt;
+效果如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;这些文字会生成&lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt;&lt;/em&gt;
+&lt;em&gt;这些文字会生成&lt;code&gt;&amp;lt;u&amp;gt;&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;这些文字会生成&lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;&lt;/strong&gt;
+&lt;strong&gt;这些文字会生成&lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;换行&lt;/h2&gt;
+
+&lt;p&gt;四个及以上空格加回车。
+如果不想打这么多空格，只要回车就为换行，请勾选：&lt;code&gt;Preferences&lt;/code&gt; - &lt;code&gt;Themes&lt;/code&gt; - &lt;code&gt;Translate newlines to &amp;lt;br&amp;gt; tags&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-4&quot;&gt;列表&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-5&quot;&gt;无序列表&lt;/h3&gt;
+
+&lt;p&gt;Markdown 语法：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+* 项目一 无序列表 `* + 空格键`
+* 项目二
+* 项目二的子项目一 无序列表 `TAB + * + 空格键`
+* 项目二的子项目二
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;在 MWeb 中的快捷键为： &lt;code&gt;Option + U&lt;/code&gt;
+效果如下：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;项目一 无序列表 &lt;code&gt;* + 空格键&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;项目二&lt;/li&gt;
+  &lt;li&gt;项目二的子项目一 无序列表 &lt;code&gt;TAB + * + 空格键&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;项目二的子项目二&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-6&quot;&gt;有序列表&lt;/h3&gt;
+
+&lt;p&gt;Markdown 语法：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+1. 项目一 有序列表 `数字 + . + 空格键`
+2. 项目二 
+3. 项目三
+1. 项目三的子项目一 有序列表 `TAB + 数字 + . + 空格键`
+2. 项目三的子项目二
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;效果如下：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;项目一 有序列表 &lt;code&gt;数字 + . + 空格键&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;项目二 &lt;/li&gt;
+  &lt;li&gt;项目三&lt;/li&gt;
+  &lt;li&gt;项目三的子项目一 有序列表 &lt;code&gt;TAB + 数字 + . + 空格键&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;项目三的子项目二&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;task-lists&quot;&gt;任务列表（Task lists）&lt;/h3&gt;
+
+&lt;p&gt;Markdown 语法：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+- [ ] 任务一 未做任务 `- + 空格 + [ ]`
+- [x] 任务二 已做任务 `- + 空格 + [x]`
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;效果如下：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[ ] 任务一 未做任务 &lt;code&gt;- + 空格 + [ ]&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;[x] 任务二 已做任务 &lt;code&gt;- + 空格 + [x]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-7&quot;&gt;图片&lt;/h2&gt;
+
+&lt;p&gt;Markdown 语法：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+![GitHub set up](http://zh.mweb.im/asset/img/set-up-git.gif)
+格式: ![Alt Text](url)
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Control + Shift + I&lt;/code&gt; 可插入Markdown语法。
+如果是 MWeb 的文档库中的文档，还可以用拖放图片、&lt;code&gt;CMD + V&lt;/code&gt; 粘贴、&lt;code&gt;CMD + Option + I&lt;/code&gt; 导入这三种方式来增加图片。
+效果如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://zh.mweb.im/asset/img/set-up-git.gif&quot; alt=&quot;GitHub set up&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;MWeb 引入的特别的语法来设置图片宽度，方法是在图片描述后加 &lt;code&gt;-w + 图片宽度&lt;/code&gt; 即可，比如说要设置上面的图片的宽度为 140，语法如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://zh.mweb.im/asset/img/set-up-git.gif&quot; alt=&quot;GitHub set up-w140&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-8&quot;&gt;链接&lt;/h2&gt;
+
+&lt;p&gt;Markdown 语法：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+email &amp;lt;example@example.com&amp;gt;
+[GitHub](http://github.com)
+自动生成连接  &amp;lt;http://www.github.com/&amp;gt;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Control + Shift + L&lt;/code&gt; 可插入Markdown语法。
+如果是 MWeb 的文档库中的文档，拖放或&lt;code&gt;CMD + Option + I&lt;/code&gt; 导入非图片时，会生成连接。
+效果如下：&lt;/p&gt;
+
+&lt;p&gt;Email 连接： &lt;a href=&quot;&amp;#109;&amp;#097;&amp;#105;&amp;#108;&amp;#116;&amp;#111;:&amp;#101;&amp;#120;&amp;#097;&amp;#109;&amp;#112;&amp;#108;&amp;#101;&amp;#064;&amp;#101;&amp;#120;&amp;#097;&amp;#109;&amp;#112;&amp;#108;&amp;#101;&amp;#046;&amp;#099;&amp;#111;&amp;#109;&quot;&gt;&amp;#101;&amp;#120;&amp;#097;&amp;#109;&amp;#112;&amp;#108;&amp;#101;&amp;#064;&amp;#101;&amp;#120;&amp;#097;&amp;#109;&amp;#112;&amp;#108;&amp;#101;&amp;#046;&amp;#099;&amp;#111;&amp;#109;&lt;/a&gt;
+&lt;a href=&quot;http://github.com&quot;&gt;连接标题Github网站&lt;/a&gt;
+自动生成连接像： &lt;a href=&quot;http://www.github.com/&quot;&gt;http://www.github.com/&lt;/a&gt; 这样&lt;/p&gt;
+
+&lt;h2 id=&quot;section-9&quot;&gt;区块引用&lt;/h2&gt;
+
+&lt;p&gt;Markdown 语法：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+某某说:
+&amp;gt; 第一行引用
+&amp;gt; 第二行费用文字
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;CMD + Shift + B&lt;/code&gt; 可插入Markdown语法。
+效果如下：&lt;/p&gt;
+
+&lt;p&gt;某某说:
+&amp;gt; 第一行引用
+&amp;gt; 第二行费用文字&lt;/p&gt;
+
+&lt;h2 id=&quot;section-10&quot;&gt;行内代码&lt;/h2&gt;
+
+&lt;p&gt;Markdown 语法：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+像这样即可：`&amp;lt;addr&amp;gt;` `code`
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;CMD + K&lt;/code&gt; 可插入Markdown语法。
+效果如下：&lt;/p&gt;
+
+&lt;p&gt;像这样即可：&lt;code&gt;&amp;lt;addr&amp;gt;&lt;/code&gt; &lt;code&gt;code&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-11&quot;&gt;多行或者一段代码&lt;/h2&gt;
+
+&lt;p&gt;Markdown 语法：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;```js
+function fancyAlert(arg) {
+    if(arg) {
+    $.facebox({div:&#39;#foo&#39;})
+    }
+
+}
+```
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;CMD + Shift + K&lt;/code&gt; 可插入Markdown语法。
+效果如下：&lt;/p&gt;
+
+&lt;p&gt;```js
+function fancyAlert(arg) {
+    if(arg) {
+    $.facebox({div:’#foo’})
+    }&lt;/p&gt;
+
+&lt;p&gt;}
+```&lt;/p&gt;
+
+&lt;h2 id=&quot;section-12&quot;&gt;顺序图或流程图&lt;/h2&gt;
+
+&lt;p&gt;Markdown 语法：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;```sequence
+张三-&amp;gt;李四: 嘿，小四儿, 写博客了没?
+Note right of 李四: 李四愣了一下，说：
+李四--&amp;gt;张三: 忙得吐血，哪有时间写。
+```
+
+```flow
+st=&amp;gt;start: 开始
+e=&amp;gt;end: 结束
+op=&amp;gt;operation: 我的操作
+cond=&amp;gt;condition: 确认？
+
+st-&amp;gt;op-&amp;gt;cond
+cond(yes)-&amp;gt;e
+cond(no)-&amp;gt;op
+```
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;效果如下（ &lt;code&gt;Preferences&lt;/code&gt; - &lt;code&gt;Themes&lt;/code&gt; - &lt;code&gt;Enable sequence &amp;amp; flow chart&lt;/code&gt; 才会看到效果 ）：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;sequence
+张三-&amp;gt;李四: 嘿，小四儿, 写博客了没?
+Note right of 李四: 李四愣了一下，说：
+李四--&amp;gt;张三: 忙得吐血，哪有时间写。
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;```flow
+st=&amp;gt;start: 开始
+e=&amp;gt;end: 结束
+op=&amp;gt;operation: 我的操作
+cond=&amp;gt;condition: 确认？&lt;/p&gt;
+
+&lt;p&gt;st-&amp;gt;op-&amp;gt;cond
+cond(yes)-&amp;gt;e
+cond(no)-&amp;gt;op
+```&lt;/p&gt;
+
+&lt;p&gt;更多请参考：&lt;a href=&quot;http://bramp.github.io/js-sequence-diagrams/&quot;&gt;http://bramp.github.io/js-sequence-diagrams/&lt;/a&gt;, &lt;a href=&quot;http://adrai.github.io/flowchart.js/&quot;&gt;http://adrai.github.io/flowchart.js/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-13&quot;&gt;表格&lt;/h2&gt;
+
+&lt;p&gt;Markdown 语法：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+第一格表头 | 第二格表头
+--------- | -------------
+内容单元格 第一列第一格 | 内容单元格第二列第一格
+内容单元格 第一列第二格 多加文字 | 内容单元格第二列第二格
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;效果如下：&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;第一格表头&lt;/th&gt;
+      &lt;th&gt;第二格表头&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;内容单元格 第一列第一格&lt;/td&gt;
+      &lt;td&gt;内容单元格第二列第一格&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;内容单元格 第一列第二格 多加文字&lt;/td&gt;
+      &lt;td&gt;内容单元格第二列第二格&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;section-14&quot;&gt;删除线&lt;/h2&gt;
+
+&lt;p&gt;Markdown 语法：&lt;/p&gt;
+
+&lt;p&gt;加删除线像这样用： ~~删除这些~~&lt;/p&gt;
+
+&lt;p&gt;效果如下：&lt;/p&gt;
+
+&lt;p&gt;加删除线像这样用： ~~删除这些~~&lt;/p&gt;
+
+&lt;h2 id=&quot;section-15&quot;&gt;分隔线&lt;/h2&gt;
+
+&lt;p&gt;以下三种方式都可以生成分隔线：&lt;/p&gt;
+
+&lt;p&gt;```
+***&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;```&lt;/p&gt;
+
+&lt;p&gt;效果如下：&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;mathjax&quot;&gt;MathJax&lt;/h2&gt;
+
+&lt;p&gt;Markdown 语法：&lt;/p&gt;
+
+&lt;p&gt;```
+块级公式：
+&lt;script type=&quot;math/tex&quot;&gt;	x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} &lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;\[ \frac{1}{\Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{\frac25 \pi}} =
+1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}}
+{1+\frac{e^{-8\pi}} {1+\ldots} } } } \]&lt;/p&gt;
+
+&lt;p&gt;行内公式： $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$
+```&lt;/p&gt;
+
+&lt;p&gt;效果如下（&lt;code&gt;Preferences&lt;/code&gt; - &lt;code&gt;Themes&lt;/code&gt; - &lt;code&gt;Enable MathJax&lt;/code&gt; 才会看到效果）：&lt;/p&gt;
+
+&lt;p&gt;块级公式：
+&lt;script type=&quot;math/tex&quot;&gt;	x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} &lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;\[ \frac{1}{\Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{\frac25 \pi}} =
+1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}}
+{1+\frac{e^{-8\pi}} {1+\ldots} } } } \]&lt;/p&gt;
+
+&lt;p&gt;行内公式： $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$&lt;/p&gt;
+
+&lt;h2 id=&quot;footnote&quot;&gt;脚注（Footnote）&lt;/h2&gt;
+
+&lt;p&gt;Markdown 语法：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+这是一个脚注：[^sample_footnote]
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;效果如下：&lt;/p&gt;
+
+&lt;p&gt;这是一个脚注：&lt;sup id=&quot;fnref:sample_footnote&quot;&gt;&lt;a href=&quot;#fn:sample_footnote&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-16&quot;&gt;注释和阅读更多&lt;/h2&gt;
+
+&lt;!-- comment --&gt;
+&lt;!-- more --&gt;
+
+&lt;p&gt;Actions-&amp;gt;Insert Read More Comment &lt;em&gt;或者&lt;/em&gt; &lt;code&gt;Command + .&lt;/code&gt;
+&lt;strong&gt;注&lt;/strong&gt; 阅读更多的功能只用在生成网站或博客时，插入时注意要后空一行。&lt;/p&gt;
+
+&lt;h2 id=&quot;toc&quot;&gt;TOC&lt;/h2&gt;
+
+&lt;p&gt;Markdown 语法：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+[TOC]
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;效果如下：&lt;/p&gt;
+
+&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:sample_footnote&quot;&gt;
+      &lt;p&gt;这里是脚注信息 &lt;a href=&quot;#fnref:sample_footnote&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 06 Oct 2016 15:02:03 +0800</pubDate>
+        <link>http://awbeci.xyz/markdown/2016/10/06/markdown-syntax.html</link>
+        <guid isPermaLink="true">http://awbeci.xyz/markdown/2016/10/06/markdown-syntax.html</guid>
+        
+        
+        <category>markdown</category>
+        
+      </item>
+    
+      <item>
+        <title>好用的Markdown编辑器一览</title>
+        <description>&lt;h2 id=&quot;markdown-&quot;&gt;Markdown 免费编辑器&lt;/h2&gt;
+
+&lt;h3 id=&quot;windows-&quot;&gt;Windows 平台&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;MarkdownPad&lt;/li&gt;
+  &lt;li&gt;MarkPad&lt;/li&gt;
+  &lt;li&gt;Red&lt;/li&gt;
+  &lt;li&gt;Green&lt;/li&gt;
+  &lt;li&gt;Blue&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;linux-&quot;&gt;Linux 平台&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ReText&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;mac-&quot;&gt;Mac 平台&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Mou&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;在线编辑器&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Markable.in&lt;/li&gt;
+  &lt;li&gt;Dillinger.io&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-1&quot;&gt;浏览器插件&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;MaDe (Chrome)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-2&quot;&gt;高级应用&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Sublime Text 2 + MarkdownEditing / 教程&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;参考地址：&lt;/h3&gt;
+&lt;p&gt;1、&lt;a href=&quot;http://www.williamlong.info/archives/4319.html&quot;&gt;http://www.williamlong.info/archives/4319.html&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 06 Oct 2016 14:40:00 +0800</pubDate>
+        <link>http://awbeci.xyz/markdown/2016/10/06/markdown-edit.html</link>
+        <guid isPermaLink="true">http://awbeci.xyz/markdown/2016/10/06/markdown-edit.html</guid>
+        
+        
+        <category>markdown</category>
+        
+      </item>
+    
+      <item>
+        <title>如何使用MWeb</title>
+        <description>&lt;h1 id=&quot;mweb&quot;&gt;欢迎使用 MWeb&lt;/h1&gt;
+
+&lt;p&gt;首先介绍一下 MWeb 是什么，MWeb 是专业的 Markdown 写作、记笔记、静态博客生成软件。MWeb 使用的是 Github Flavored Markdown 语法，在使用 MWeb 前，建议你一定要去 &lt;a href=&quot;http://zh.mweb.im/&quot;&gt;MWeb 官网首页&lt;/a&gt; 看一下介绍视频，MWeb 官网也做了比较详细的帮助，建议你也看一下大概内容，帮助的网址为：&lt;a href=&quot;http://zh.mweb.im/help.html&quot;&gt;http://zh.mweb.im/help.html&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;需要您重点注意的&lt;/h2&gt;
+
+&lt;p&gt;MWeb 是有&lt;strong&gt;两种模式&lt;/strong&gt;的：外部模式和文档库模式。MWeb 为了满足所有 Markdown 使用需求，设计了两种模式！外部模式用于打开和编辑所有本地 Markdown 文档。另外为了方便用 Markdown 记笔记，MWeb 设计了文档库模式，文档库中的文档也支持一键生成静态博客，以便于分享。关于两个模式的情况，还是建议您去看一下官网的视频和帮助。&lt;/p&gt;
+
+&lt;h2 id=&quot;mweb-1&quot;&gt;帮助我们改进 MWeb&lt;/h2&gt;
+
+&lt;p&gt;如果你喜欢 MWeb，想让它变得更好，你可以：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;推荐 MWeb，让更多的人知道。&lt;/li&gt;
+  &lt;li&gt;给我们发反馈和建议：&amp;lt;coderforart+233@gmail.com&amp;gt;&lt;/li&gt;
+  &lt;li&gt;在 Mac App Store 上评价 （如果是在 MAS 上购买的话）。&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+        <pubDate>Thu, 06 Oct 2016 14:08:03 +0800</pubDate>
+        <link>http://awbeci.xyz/jekyll/update/2016/10/06/used-mweb.html</link>
+        <guid isPermaLink="true">http://awbeci.xyz/jekyll/update/2016/10/06/used-mweb.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+  </channel>
+</rss>

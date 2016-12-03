@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>transition结合transform制作出3D效果</title>
+    <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css" media="screen" title="no title">
+  </head>
+  <body>
+    <section class="blog-container">
+      <section class="left-container">
+  <header class="top">
+      <img src="/images/left/QQ20161202-1@2x.png">
+  </header>
+  <footer class="bottom">
+      <div class="avator">
+        <a href="http://www.awbeci.com" target="_blank">
+          <img src="/images/left/zhangwei.jpg" alt="" />
+        </a>
+      </div>
+      <div class="nicename">
+        <a href="http://www.awbeci.xyz">耀一世界的彩</a>
+      </div>
+      <div class="subname">
+        <span>全栈工程师的日常</span>
+      </div>
+      <nav class="navbar">
+        <a href="javascript:;" id="showCategories">标签</a>
+        <span>/</span>
+        <a href="http://resume.awbeci.xyz">关于我i</a>
+      </nav>
+      <ul class="list-inline">
+        <li>
+            <a target="_blank" href="https://www.facebook.com/weiruan.zw">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://twitter.com/zhangwei0808">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="http://weibo.com/waishow">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://github.com/zhangwei900808">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+      </ul>
+  </footer>
+</section>
+
+      <div class="categories">
+  <ul class="sidebar-categories">
+      
+      <li><a href="/blog/category/jekyll/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/update/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/markdown/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/macbook/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/sierra/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/note/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/css3/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/rem/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/audio/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/loadeddata/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/mobile/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/jquery/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/plugin/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/js/index.html">This is a link to foo</a></li>
+      
+  </ul>
+</div>
+
+      <div class="middle">
+      <article class="home">
+        <p>今天看到看到网上一个<a href="http://imhaoran.wang/">博客</a>，上面有个功能特别吸引我，就是点击链接会展开一个侧边栏，而那个侧边栏有动画效果，当然你也可以通过jquery来做，不过有CSS3不用jquery也可以。</p>
+
+<p>下面这段代码你们可以试试：</p>
+
+<p><code>js
+    transform: translate3d(300px,0,0);
+    transition: all .2s ease-in;
+</code></p>
+
+<h2 id="css3transformtransitionanimation">CSS3中Transform,Transition,Animation的区别</h2>
+
+<h3 id="transform">Transform：对元素进行变形；</h3>
+
+<h3 id="transitionflash">Transition：对元素某个属性或多个属性的变化，进行控制（时间等），类似flash的补间动画。但只有两个关键贞。开始，结束。</h3>
+
+<h3 id="animationflash">Animation：对元素某个属性或多个属性的变化，进行控制（时间等），类似flash的补间动画。可以设置多个关键贞。</h3>
+
+<h3 id="transitionanimation">Transition与Animation:</h3>
+
+<blockquote>
+  <p>transition需要触发一个事件 ,而animation在不需要触发任何事件的情况下也可以显式的随着时间变化来改变元素css的属性值，从而达到一种动画的效果。</p>
+</blockquote>
+
+<p>参考：
+1. <a href="http://www.w3cplus.com/css3/css3-3d-transform.html">http://www.w3cplus.com/css3/css3-3d-transform.html</a></p>
+
+
+        <div id="ds-thread" class="ds-thread" data-url="/css3/2016/12/01/css3-transform.html" data-title="transition结合transform制作出3D效果" data-thread-key="transition结合transform制作出3D效果"></div>
+        <!-- 多说评论框 end -->
+        <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+        <script type="text/javascript">
+        var duoshuoQuery = {short_name:"zw900808"};
+          (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0]
+             || document.getElementsByTagName('body')[0]).appendChild(ds);
+          })();
+          </script>
+        <!-- 多说公共JS代码 end -->
+      </article>
+      </div>
+      <div class="note-footer">
+  <span>Copyright © zhangwei Blog 2016 </span>
+</div>
+
+      <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+      <script src="/assets/dist/default.js" charset="utf-8"></script>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>移动端绑定手机页面</title>
+    <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css" media="screen" title="no title">
+  </head>
+  <body>
+    <section class="blog-container">
+      <section class="left-container">
+  <header class="top">
+      <img src="/images/left/QQ20161202-1@2x.png">
+  </header>
+  <footer class="bottom">
+      <div class="avator">
+        <a href="http://www.awbeci.com" target="_blank">
+          <img src="/images/left/zhangwei.jpg" alt="" />
+        </a>
+      </div>
+      <div class="nicename">
+        <a href="http://www.awbeci.xyz">耀一世界的彩</a>
+      </div>
+      <div class="subname">
+        <span>全栈工程师的日常</span>
+      </div>
+      <nav class="navbar">
+        <a href="javascript:;" id="showCategories">标签</a>
+        <span>/</span>
+        <a href="http://resume.awbeci.xyz">关于我i</a>
+      </nav>
+      <ul class="list-inline">
+        <li>
+            <a target="_blank" href="https://www.facebook.com/weiruan.zw">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://twitter.com/zhangwei0808">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="http://weibo.com/waishow">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://github.com/zhangwei900808">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+      </ul>
+  </footer>
+</section>
+
+      <div class="categories">
+  <ul class="sidebar-categories">
+      
+      <li><a href="/blog/category/jekyll/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/update/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/markdown/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/macbook/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/sierra/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/note/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/css3/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/rem/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/audio/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/loadeddata/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/mobile/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/jquery/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/plugin/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/js/index.html">This is a link to foo</a></li>
+      
+  </ul>
+</div>
+
+      <div class="middle">
+      <article class="home">
+        <h3 id="section">写这个博客的目的就是为了以后如果遇到相同的需求可以直播复制这段代码。</h3>
+<p>html:</p>
+
+<p>```html
+&lt;!DOCTYPE html&gt;</p>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<meta name="renderer" content="webkit" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<title>故事包</title>
+<link rel="icon" type="image/png" href="/resources/img/md_a1.png" />
+<link href="//cdn.bootcss.com/weui/0.4.3/style/weui.min.css" rel="stylesheet" />
+<link href="//cdn.bootcss.com/jquery-weui/0.8.1/css/jquery-weui.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="/resources/css/mobileBind.css" media="screen" title="no title" />
+</head>
+<body>
+	<header class="logo">
+		<img src="/resources/img/md_logo_84X37.png" />
+	</header>
+	<div class="weui_cells weui_cells_form">
+		<div class="weui_cell">
+			<div class="weui_cell_hd">
+				<label class="weui_label">手机号</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary">
+				<input id="tel" class="weui_input" type="number" placeholder="请输入手机号" />
+			</div>
+		</div>
+		<div class="weui_cell">
+			<div class="weui_cell_hd">
+				<label class="weui_label">验证码</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary">
+				<input class="weui_input" type="number" placeholder="请输入验证码" />
+			</div>
+			<div class="weui_cell_ft">
+				<a id="getCode" href="javascript:;" class="weui_btn weui_btn_mini weui_btn_warn">获取验证码</a>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<a href="javascript:;" class="weui_btn weui_btn_primary">完成</a>
+	</footer>
+	<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+	<script src="//cdn.bootcss.com/jquery-weui/0.8.1/js/jquery-weui.min.js"></script>
+```
+
+javascript:
+
+```js
+$(function() {
+			$('#tel').bind('input propertychange', function() {
+				var this$ = $(this);
+				/*if (this$.val().trim().length == 0) {
+				this$.val('');
+				$.alert("手机号码有误，请重填", "提示");
+				return false;
+				} */
+				if (this$.val().length &lt; 11) {
+
+				} else if (this$.val().length == 11) {
+					if (!(/^1[34578]\d{9}$/.test(this$.val()))) {
+						$.alert("手机号码有误，请重填", "提示");
+						this$.val('');
+						return false;
+					}
+				} else if (this$.val().length &gt; 11) {
+					$.alert("手机号码有误，请重填", "提示");
+					this$.val('');
+					return false;
+				}
+			});
+
+			//获取验证码状态
+			var state = "no-get";
+			$('#getCode').on('click', function(e) {
+				if (!(/^1[34578]\d{9}$/.test($('#tel').val()))) {
+					$.alert("手机号码有误，请重填", "提示");
+					$('#tel').val('');
+					return false;
+				}
+				if (state == "no-get") {
+					var $this = $(this);
+					var time = 60;//60秒后再次获取
+					var clrTime = setInterval(function() {
+						var txtTime = --time;
+						if (txtTime == 0) {
+							clearInterval(clrTime);
+							$this.text('重新获取');
+							state = "no-get"
+						} else {
+							$this.text(txtTime + 'S后获取');
+							state = "geting";
+						}
+					}, 1000);
+				}
+			})
+		})
+
+		function isNumber(val) {
+			var strRegex = /^[0-9]*[1-9][0-9]*$/;
+			return strRegex.test(val);
+		}
+```
+
+![](http://cdn.awbeci.com/images/awbeci-xyz/blog/2016-10-14-mobile-bind-1.png)
+
+![](http://cdn.awbeci.com/images/awbeci-xyz/blog/2016-10-14-mobile-bind-2.png)
+
+![](http://cdn.awbeci.com/images/awbeci-xyz/blog/2016-10-14-mobile-bind-3.png)
+</body></html>
+
+
+        <div id="ds-thread" class="ds-thread" data-url="/mobile/2016/10/14/mobile-bind.html" data-title="移动端绑定手机页面" data-thread-key="移动端绑定手机页面"></div>
+        <!-- 多说评论框 end -->
+        <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+        <script type="text/javascript">
+        var duoshuoQuery = {short_name:"zw900808"};
+          (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0]
+             || document.getElementsByTagName('body')[0]).appendChild(ds);
+          })();
+          </script>
+        <!-- 多说公共JS代码 end -->
+      </article>
+      </div>
+      <div class="note-footer">
+  <span>Copyright © zhangwei Blog 2016 </span>
+</div>
+
+      <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+      <script src="/assets/dist/default.js" charset="utf-8"></script>
+    </section>
+  </body>
+</html>

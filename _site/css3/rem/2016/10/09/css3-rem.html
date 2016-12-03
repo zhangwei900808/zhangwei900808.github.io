@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>学习CSS3特性REM</title>
+    <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css" media="screen" title="no title">
+  </head>
+  <body>
+    <section class="blog-container">
+      <section class="left-container">
+  <header class="top">
+      <img src="/images/left/QQ20161202-1@2x.png">
+  </header>
+  <footer class="bottom">
+      <div class="avator">
+        <a href="http://www.awbeci.com" target="_blank">
+          <img src="/images/left/zhangwei.jpg" alt="" />
+        </a>
+      </div>
+      <div class="nicename">
+        <a href="http://www.awbeci.xyz">耀一世界的彩</a>
+      </div>
+      <div class="subname">
+        <span>全栈工程师的日常</span>
+      </div>
+      <nav class="navbar">
+        <a href="javascript:;" id="showCategories">标签</a>
+        <span>/</span>
+        <a href="http://resume.awbeci.xyz">关于我i</a>
+      </nav>
+      <ul class="list-inline">
+        <li>
+            <a target="_blank" href="https://www.facebook.com/weiruan.zw">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://twitter.com/zhangwei0808">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="http://weibo.com/waishow">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://github.com/zhangwei900808">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </li>
+      </ul>
+  </footer>
+</section>
+
+      <div class="categories">
+  <ul class="sidebar-categories">
+      
+      <li><a href="/blog/category/jekyll/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/update/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/markdown/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/macbook/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/sierra/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/note/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/css3/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/rem/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/audio/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/loadeddata/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/mobile/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/jquery/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/plugin/index.html">This is a link to foo</a></li>
+      
+      <li><a href="/blog/category/js/index.html">This is a link to foo</a></li>
+      
+  </ul>
+</div>
+
+      <div class="middle">
+      <article class="home">
+        <p>最近项目中要做微信端网页开发，但是要做适屏，因为iphone4，5，6的屏幕有大有小，所以不同浏览器预览的效果也不一样，那怎样才能达到不同屏幕显示的效果也一样呢，
+这个时候我们就要用到CSS3的rem特性，首先让我们认识一下到底REM是干嘛用的？以及如何来使用？</p>
+
+<h2 id="section">简介：</h2>
+<p>REM是相对单位，是相对HTML根元素。
+这个单位可谓集相对大小和绝对大小的优点于一身，通过它既可以做到只修改根元素就成比例地调整所有字体大小，又可以避免字体大小逐层复合的连锁反应。
+目前，除了IE8及更早版本外，所有浏览器均已支持rem。</p>
+
+<p>下面这段代码是我应用到项目中的CSS:</p>
+
+<p>```css
+  @media only screen and (min-width: 320px){
+  html {
+      font-size: 10px !important;/<em>10 ÷ 16 × 100% = 62.5%</em>/
+  }
+}</p>
+
+<p>@media only screen and (min-width: 370px){
+    html {
+        font-size:13px !important;
+    }
+}
+@media only screen and (min-width: 410px){
+    html {
+        font-size: 16px !important;
+    }
+}
+@media only screen and (min-width: 481px){
+    html {
+        font-size: 23px !important;
+    }
+}</p>
+
+<p>body{
+  font-family: ‘黑体’;
+  background-color: #f8f8f8;
+  letter-spacing: -1px;
+}
+ul{
+  display:inline-block;
+  margin:0;
+  padding:0;
+}
+ul li{
+  float:left;
+  list-style: none;
+}
+a:visited{
+  color:#0E0E0E;
+}
+.weui_search_bar{
+  background-color: #fff;
+}
+.weui_search_outer{
+  background-color: #fff;
+}
+.weui_search_outer:after{
+  border: none;
+}
+.swiper-slide&gt;img {
+    width: 100%;
+}
+.navbar{</p>
+
+<p>}
+.navbar ul{
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar ul li{
+  width: 20%;
+}
+.navbar ul li a{
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.navbar ul li:nth-child(6+n){
+  margin-top: 10px;
+}
+.navbar ul li img{
+      width: 3.9rem;
+}
+.navbar ul li a .type{
+  font-size: 1.1rem;
+  padding:3px 0;
+}
+/<em>wonderful-recommend</em>/
+.common-content{
+      padding: 0 10px;
+      margin-top: 15px;
+}
+.common-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 1.2rem;
+  padding-bottom:10px;
+  border-bottom: 1px solid #EFF0F0;
+}</p>
+
+<p>.common-header .left{
+  display: flex;
+  align-items: center;
+}
+.common-header .left img{
+      width: 1.2rem;
+}
+.common-header .left .title{
+  margin-left:5px;
+  font-size: 1.2rem;
+}
+.common-header .right{
+  display: inline-block;
+}
+.common-header .right .more{
+  color:#FF4B00;
+  font-size: 1rem;
+}
+.wonderful-recommend{
+  margin-top: 20px;
+}
+.wonderful-recommend .list{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 .5rem;
+}</p>
+
+<p>.wonderful-recommend .list li{
+      width: 33%;
+      margin-top: 15px;
+}
+.wonderful-recommend .list li a{
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+}
+.wonderful-recommend .list li a img{
+      width: 90%;
+}
+.wonderful-recommend .list li a .name{
+  font-size: 1rem;
+  width: 85%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  padding: 5px 0;
+}</p>
+
+<p>.wonderful-recommend .list li a .bottom{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wonderful-recommend .list li a .bottom img{
+      width: .5rem;
+}
+.wonderful-recommend .list li a .bottom .view-count{
+  color: #808080;
+  font-size: 1rem;
+  margin-left: 5px;
+  letter-spacing: normal;
+}</p>
+
+<p>/<em>album-recommend</em>/
+.album-recommend{
+  margin-top: 20px;
+}
+.album-recommend .common-header{
+  border: none;
+}</p>
+
+<p>.album-recommend .list{
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 1.2rem;
+}</p>
+
+<p>.album-recommend .list li{
+  width: 47%;
+  margin-bottom: 10px;
+}</p>
+
+<p>.album-recommend .list li a{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #E1E1E1;
+  padding: 6px;
+  border-radius: 2px;
+}</p>
+
+<p>.album-recommend .list li a img{
+  width:100%;
+}</p>
+
+<p>.album-recommend .list li a .name{
+  font-size: 1.1rem;
+  letter-spacing: -1px;
+}
+/<em>support-commodity</em>/
+.support-commodity{
+  margin-top: 15px;
+}
+.support-commodity .common-header{
+  border: none;
+}</p>
+
+<p>.support-commodity .list{
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 1.2rem;
+}</p>
+
+<p>.support-commodity .list li{
+  width: 47.8%;
+  margin-bottom: 10px;
+}</p>
+
+<p>.support-commodity .list li a{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #F0F0F0;
+  padding: 7px;
+  border-radius: 2px;
+}</p>
+
+<p>.support-commodity .list li a img{
+  width:100%;
+}</p>
+
+<p>.support-commodity .list li a .name{
+  font-size: 1rem;
+  padding-top: 3px;
+}</p>
+
+<p>.support-commodity .list li a .price-content{
+  font-size: 1rem;
+  display: flex;
+  color: #FF0000;
+  align-items: center;
+}</p>
+
+<p>/<em>footer</em>/
+footer{
+    border-top: 1px solid #E0E0E0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}</p>
+
+<p>footer a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: 50%;
+}
+footer a:first-child{
+  border-right: 1px solid #e0e0e0;
+}
+footer a img{
+  width:1.4rem;
+}
+footer a .title{
+  color:#499D11;
+  font-size: 1.2rem;
+  margin-left: 5px;
+}</p>
+
+<p>```
+参考地址：</p>
+
+<p><a href="http://www.w3cplus.com/css3/define-font-size-with-css3-rem">http://www.w3cplus.com/css3/define-font-size-with-css3-rem</a></p>
+
+<p><a href="http://isux.tencent.com/web-app-rem.html">http://isux.tencent.com/web-app-rem.html</a></p>
+
+<p><a href="http://www.w3cplus.com/preprocessor/sass-px-to-rem-with-mixin-and-function.html">http://www.w3cplus.com/preprocessor/sass-px-to-rem-with-mixin-and-function.html</a></p>
+
+
+        <div id="ds-thread" class="ds-thread" data-url="/css3/rem/2016/10/09/css3-rem.html" data-title="学习CSS3特性REM" data-thread-key="学习CSS3特性REM"></div>
+        <!-- 多说评论框 end -->
+        <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+        <script type="text/javascript">
+        var duoshuoQuery = {short_name:"zw900808"};
+          (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0]
+             || document.getElementsByTagName('body')[0]).appendChild(ds);
+          })();
+          </script>
+        <!-- 多说公共JS代码 end -->
+      </article>
+      </div>
+      <div class="note-footer">
+  <span>Copyright © zhangwei Blog 2016 </span>
+</div>
+
+      <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+      <script src="/assets/dist/default.js" charset="utf-8"></script>
+    </section>
+  </body>
+</html>
