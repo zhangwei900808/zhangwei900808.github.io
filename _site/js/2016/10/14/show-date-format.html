@@ -66,89 +66,56 @@
   </footer>
 </section>
 
-      <div class="categories">
-  <ul class="sidebar-categories">
-      
-      <li><a href="/blog/category/jekyll/index.html">This is a link to foo</a></li>
-      
-      <li><a href="/blog/category/update/index.html">This is a link to foo</a></li>
-      
-      <li><a href="/blog/category/markdown/index.html">This is a link to foo</a></li>
-      
-      <li><a href="/blog/category/macbook/index.html">This is a link to foo</a></li>
-      
-      <li><a href="/blog/category/sierra/index.html">This is a link to foo</a></li>
-      
-      <li><a href="/blog/category/note/index.html">This is a link to foo</a></li>
-      
-      <li><a href="/blog/category/css3/index.html">This is a link to foo</a></li>
-      
-      <li><a href="/blog/category/rem/index.html">This is a link to foo</a></li>
-      
-      <li><a href="/blog/category/audio/index.html">This is a link to foo</a></li>
-      
-      <li><a href="/blog/category/loadeddata/index.html">This is a link to foo</a></li>
-      
-      <li><a href="/blog/category/mobile/index.html">This is a link to foo</a></li>
-      
-      <li><a href="/blog/category/jquery/index.html">This is a link to foo</a></li>
-      
-      <li><a href="/blog/category/plugin/index.html">This is a link to foo</a></li>
-      
-      <li><a href="/blog/category/js/index.html">This is a link to foo</a></li>
-      
-  </ul>
-</div>
-
       <div class="middle">
       <article class="home">
         <h4 id="js">公司开发过程中，遇到好多公用的js，比如这个,根据秒数显示指定格式的字符串，以备日后使用。</h4>
 
-<p>```js
-function formatSeconds(value) {
-	var second = parseInt(value);// 秒
-	var minute = 0;// 分
-	var hour = 0;// 时
-	if (second &gt; 60) {
-		minute = parseInt(second / 60);
-		second = parseInt(second % 60);
-		if (minute &gt; 60) {
-			hour = parseInt(minute / 60);
-			minute = parseInt(minute % 60);
-		}
-	} else {
-		if (second &lt; 10) {
-			return “00:0” + second;
-		} else {
-			return “00:” + second;
-		}
-	}</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">formatSeconds</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">second</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span><span class="c1">// 秒</span>
+	<span class="kd">var</span> <span class="nx">minute</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="c1">// 分</span>
+	<span class="kd">var</span> <span class="nx">hour</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="c1">// 时</span>
+	<span class="k">if</span> <span class="p">(</span><span class="nx">second</span> <span class="o">&gt;</span> <span class="mi">60</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">minute</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">second</span> <span class="o">/</span> <span class="mi">60</span><span class="p">);</span>
+		<span class="nx">second</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">second</span> <span class="o">%</span> <span class="mi">60</span><span class="p">);</span>
+		<span class="k">if</span> <span class="p">(</span><span class="nx">minute</span> <span class="o">&gt;</span> <span class="mi">60</span><span class="p">)</span> <span class="p">{</span>
+			<span class="nx">hour</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">minute</span> <span class="o">/</span> <span class="mi">60</span><span class="p">);</span>
+			<span class="nx">minute</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">minute</span> <span class="o">%</span> <span class="mi">60</span><span class="p">);</span>
+		<span class="p">}</span>
+	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+		<span class="k">if</span> <span class="p">(</span><span class="nx">second</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+			<span class="k">return</span> <span class="s2">"00:0"</span> <span class="o">+</span> <span class="nx">second</span><span class="p">;</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+			<span class="k">return</span> <span class="s2">"00:"</span> <span class="o">+</span> <span class="nx">second</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
 
-<pre><code>var result;
-if (hour &gt; 0) {
-	if (second &lt; 10) {
-		second = "0" + second;
-	}
-	if (minute &lt; 10) {
-		minute = "0" + minute;
-	}
-	result = hour + " : " + minute + " : " + second;
-	return result;
-}
-if (minute &gt; 0) {
-	if (second &lt; 10) {
-		second = "0" + second;
-	}
-	if (minute &lt; 10) {
-		minute = "0" + minute;
-	}
-	return result = minute + " : " + second;
-}
-if (second &lt; 10) {
-	second = "0" + second;
-}
-return second; } ```
+	<span class="kd">var</span> <span class="nx">result</span><span class="p">;</span>
+	<span class="k">if</span> <span class="p">(</span><span class="nx">hour</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">if</span> <span class="p">(</span><span class="nx">second</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+			<span class="nx">second</span> <span class="o">=</span> <span class="s2">"0"</span> <span class="o">+</span> <span class="nx">second</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="k">if</span> <span class="p">(</span><span class="nx">minute</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+			<span class="nx">minute</span> <span class="o">=</span> <span class="s2">"0"</span> <span class="o">+</span> <span class="nx">minute</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="nx">result</span> <span class="o">=</span> <span class="nx">hour</span> <span class="o">+</span> <span class="s2">" : "</span> <span class="o">+</span> <span class="nx">minute</span> <span class="o">+</span> <span class="s2">" : "</span> <span class="o">+</span> <span class="nx">second</span><span class="p">;</span>
+		<span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">if</span> <span class="p">(</span><span class="nx">minute</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">if</span> <span class="p">(</span><span class="nx">second</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+			<span class="nx">second</span> <span class="o">=</span> <span class="s2">"0"</span> <span class="o">+</span> <span class="nx">second</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="k">if</span> <span class="p">(</span><span class="nx">minute</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+			<span class="nx">minute</span> <span class="o">=</span> <span class="s2">"0"</span> <span class="o">+</span> <span class="nx">minute</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="k">return</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">minute</span> <span class="o">+</span> <span class="s2">" : "</span> <span class="o">+</span> <span class="nx">second</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">if</span> <span class="p">(</span><span class="nx">second</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">second</span> <span class="o">=</span> <span class="s2">"0"</span> <span class="o">+</span> <span class="nx">second</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="nx">second</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre>
+</div>
 
 <p><img src="http://cdn.awbeci.com/images/awbeci-xyz/blog/2016-10-14-js-date-format.png" alt="" /></p>
 

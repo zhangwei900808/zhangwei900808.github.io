@@ -66,85 +66,51 @@
   </footer>
 </section>
 
-      <div class="categories">
-  <ul class="sidebar-categories">
-      
-      <li><a href="/blog/category/jekyll/index.html">This is a link to foo</a></li>
-      
-      <li><a href="/blog/category/update/index.html">This is a link to foo</a></li>
-      
-      <li><a href="/blog/category/markdown/index.html">This is a link to foo</a></li>
-      
-      <li><a href="/blog/category/macbook/index.html">This is a link to foo</a></li>
-      
-      <li><a href="/blog/category/sierra/index.html">This is a link to foo</a></li>
-      
-      <li><a href="/blog/category/note/index.html">This is a link to foo</a></li>
-      
-      <li><a href="/blog/category/css3/index.html">This is a link to foo</a></li>
-      
-      <li><a href="/blog/category/rem/index.html">This is a link to foo</a></li>
-      
-      <li><a href="/blog/category/audio/index.html">This is a link to foo</a></li>
-      
-      <li><a href="/blog/category/loadeddata/index.html">This is a link to foo</a></li>
-      
-      <li><a href="/blog/category/mobile/index.html">This is a link to foo</a></li>
-      
-      <li><a href="/blog/category/jquery/index.html">This is a link to foo</a></li>
-      
-      <li><a href="/blog/category/plugin/index.html">This is a link to foo</a></li>
-      
-      <li><a href="/blog/category/js/index.html">This is a link to foo</a></li>
-      
-  </ul>
-</div>
-
       <div class="middle">
       <article class="home">
         <h3 id="jquery">这里有段jquery插件的典型代码，可以参考一下：</h3>
 
-<p><code>js
-;(function($,window,document,undefined){
-    //我们的代码。。
-    //blah blah blah...
-})(jQuery,window,document);
-</code></p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">;(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">,</span><span class="nb">window</span><span class="p">,</span><span class="nb">document</span><span class="p">,</span><span class="kc">undefined</span><span class="p">){</span>
+    <span class="c1">//我们的代码。。</span>
+    <span class="c1">//blah blah blah...</span>
+<span class="p">})(</span><span class="nx">jQuery</span><span class="p">,</span><span class="nb">window</span><span class="p">,</span><span class="nb">document</span><span class="p">);</span>
+</code></pre>
+</div>
 
 <h3 id="section">再详细一点的代码：</h3>
 
-<p><code>js
-;(function($, window, document,undefined) {
-    //定义Beautifier的构造函数
-    var Beautifier = function(ele, opt) {
-        this.$element = ele,
-        this.defaults = {
-            'color': 'red',
-            'fontSize': '12px',
-            'textDecoration': 'none'
-        },
-        this.options = $.extend({}, this.defaults, opt)
-    }
-    //定义Beautifier的方法
-    Beautifier.prototype = {
-        beautify: function() {
-            return this.$element.css({
-                'color': this.options.color,
-                'fontSize': this.options.fontSize,
-                'textDecoration': this.options.textDecoration
-            });
-        }
-    }
-    //在插件中使用Beautifier对象
-    $.fn.myPlugin = function(options) {
-        //创建Beautifier的实体
-        var beautifier = new Beautifier(this, options);
-        //调用其方法
-        return beautifier.beautify();
-    }
-})(jQuery, window, document);
-</code>
-参考地址：</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">;(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">,</span> <span class="nb">window</span><span class="p">,</span> <span class="nb">document</span><span class="p">,</span><span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//定义Beautifier的构造函数</span>
+    <span class="kd">var</span> <span class="nx">Beautifier</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">ele</span><span class="p">,</span> <span class="nx">opt</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">$element</span> <span class="o">=</span> <span class="nx">ele</span><span class="p">,</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">defaults</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">'color'</span><span class="p">:</span> <span class="s1">'red'</span><span class="p">,</span>
+            <span class="s1">'fontSize'</span><span class="p">:</span> <span class="s1">'12px'</span><span class="p">,</span>
+            <span class="s1">'textDecoration'</span><span class="p">:</span> <span class="s1">'none'</span>
+        <span class="p">},</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">options</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">({},</span> <span class="k">this</span><span class="p">.</span><span class="nx">defaults</span><span class="p">,</span> <span class="nx">opt</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="c1">//定义Beautifier的方法</span>
+    <span class="nx">Beautifier</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="na">beautify</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">$element</span><span class="p">.</span><span class="nx">css</span><span class="p">({</span>
+                <span class="s1">'color'</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">color</span><span class="p">,</span>
+                <span class="s1">'fontSize'</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">fontSize</span><span class="p">,</span>
+                <span class="s1">'textDecoration'</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">textDecoration</span>
+            <span class="p">});</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="c1">//在插件中使用Beautifier对象</span>
+    <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">myPlugin</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//创建Beautifier的实体</span>
+        <span class="kd">var</span> <span class="nx">beautifier</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Beautifier</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+        <span class="c1">//调用其方法</span>
+        <span class="k">return</span> <span class="nx">beautifier</span><span class="p">.</span><span class="nx">beautify</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">})(</span><span class="nx">jQuery</span><span class="p">,</span> <span class="nb">window</span><span class="p">,</span> <span class="nb">document</span><span class="p">);</span>
+</code></pre>
+</div>
+<p>参考地址：</p>
 
 <p><a href="http://www.cnblogs.com/Wayou/p/jquery_plugin_tutorial.html">http://www.cnblogs.com/Wayou/p/jquery_plugin_tutorial.html</a></p>
 
