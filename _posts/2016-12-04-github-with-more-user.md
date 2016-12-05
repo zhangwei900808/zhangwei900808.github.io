@@ -17,7 +17,7 @@ ssh-keygen -t rsa -C 'second@mail.com'
 
 ```
 ssh-add ～/.ssh/id_rsa
-ssh-add ～/.ssh/id_rsa_second
+ssh-add ～/.ssh/id_rsa_second
 ```
 
 该命令如果报错：Could not open a connection to your authentication agent.无法连接到ssh agent，可执行ssh-agent bash命令后再执行ssh-add命令。  
