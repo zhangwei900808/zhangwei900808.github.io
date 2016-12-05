@@ -48,7 +48,7 @@ git remote add test git@github-second:second/test.git #并非原来的git@g
 这样每次连接都会使用id_rsa_second与服务器进行连接。至此，大功告成！  
 注意：github根据配置文件的user.email来获取github帐号显示author信息，所以对于多帐号用户一定要记得将user.email改为相应的email(second@mail.com)。  
 
-注意：
+**注意：**
 
 ```
 1. 第2个账户在生成ssh的时候要注意重命名id_rsa_second
