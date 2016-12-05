@@ -14,4 +14,4 @@ categories: bundle jekyll
 增加 github-pages 版本限制,比如 gem 'github-pages', '>= 104',这样 bundle install 后 jekyll 则会升级到 3.3,依赖也不会出现问题
 参考地址：
 
-> [github-pages 未限定版本,导致 jekyll 启动不兼容]<https://github.com/mzlogin/mzlogin.github.io/issues/16>
+> [github-pages 未限定版本,导致 jekyll 启动不兼容](https://github.com/mzlogin/mzlogin.github.io/issues/16)
