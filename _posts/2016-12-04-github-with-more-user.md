@@ -13,13 +13,15 @@ github使用SSH与客户端连接。如果是单用户（first），生成密钥
 ssh-keygen -t rsa -C 'second@mail.com'
 ```
 
-默认SSH只会读取id_rsa，所以为了让SSH识别新的私钥，需要将其添加到SSH agent  
+默认SSH只会读取id_rsa(**注意：但是我Mac上面没有读取，所以还是要添加**)，所以为了让SSH识别新的私钥，需要将其添加到SSH agent  
 
 ```
+ssh-add ～/.ssh/id_rsa
 ssh-add ～/.ssh/id_rsa_second
 ```
 
 该命令如果报错：Could not open a connection to your authentication agent.无法连接到ssh agent，可执行ssh-agent bash命令后再执行ssh-add命令。  
+
 完成以上步骤后在~/.ssh目录创建config文件，该文件用于配置私钥对应的服务器。内容如下： 
 
 ``` 
@@ -43,7 +45,7 @@ git remote add test git@github-second:second/test.git #并非原来的git@g
 注意：github根据配置文件的user.email来获取github帐号显示author信息，所以对于多帐号用户一定要记得将user.email改为相应的email(second@mail.com)。  
 
 注意：
-1、第2个账户在生成ssh的时候要注意重命名id_rsa_second
+**1、第2个账户在生成ssh的时候要注意重命名id_rsa_second**
 
 参考：
 
