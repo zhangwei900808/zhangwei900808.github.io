@@ -46,5 +46,7 @@ git remote add test git@github-second:second/test.git #并非原来的git@g
 1、第2个账户在生成ssh的时候要注意重命名id_rsa_second
 
 参考：
+
 1. <http://jingyan.baidu.com/article/948f592414ad67d80ef5f966.html>
+
 2. <http://blog.csdn.net/workformywork/article/details/16850463>
