@@ -15,3 +15,5 @@ categories: bundle jekyll
 参考地址：
 
 > [github-pages 未限定版本,导致 jekyll 启动不兼容](https://github.com/mzlogin/mzlogin.github.io/issues/16)
+
+> <https://github.com/github/pages-gem>

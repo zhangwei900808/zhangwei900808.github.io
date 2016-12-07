@@ -18,6 +18,10 @@ ssh-keygen -t rsa -C 'second@mail.com'
 ```
 ssh-add ～/.ssh/id_rsa
 ssh-add ～/.ssh/id_rsa_second
+
+➜  .ssh ssh-add -l           
+2048 SHA256:oUkeFCsL31Y/jNTEmdJsxMGovAXP2G1QyrUGnC+S5dE /Users/zhangwei/.ssh/id_rsa_zhanwe (RSA)
+2048 SHA256:Vt5ayPNg2xcBUxzrrQFPhfcCJjY2+/v3YcfNQ3x5jlE /Users/zhangwei/.ssh/id_rsa (RSA)
 ```
 
 该命令如果报错：Could not open a connection to your authentication agent.无法连接到ssh agent，可执行ssh-agent bash命令后再执行ssh-add命令。  
@@ -46,7 +50,19 @@ git remote add test git@github-second:second/test.git #并非原来的git@g
 
 **注意：**
 
-**1、第2个账户在生成ssh的时候要注意重命名id_rsa_second**
+```
+1. 第2个账户在生成ssh的时候要注意重命名id_rsa_second
+2. 在添加ssh-add的时候一定要记住要执行两次：ssh-add ~/.ssh/id_rsa和ssh-add ~/.ssh/id_rsa_second否则在你ssh -T的时候两次用户名相同
+3. 因为设置了多用户所以全局的用户名和邮箱就可以不用设置，只要在相应的项目里面设置就可以了，如：
+
+1.取消global
+git config --global --unset user.name
+git config --global --unset user.email
+
+2.设置每个项目repo的自己的user.email
+git config  user.email "xxxx@xx.com"
+git config  user.name "suzie"
+```
 
 参考：
 
