@@ -5,7 +5,7 @@ date: 2016-12-16 10:00
 categories: ES6 babel
 ---
 
-ES6已经敲定，但并不是所有的浏览器都完全支持，详见：(http://kangax.github.io/compat-table/es6/)。要使用ES6，需要一个编译器例如：babel。你可以把它作为一个独立的工具使用，也可以把它放在构建中。grunt，gulp和webpack中都有可以支持babel的插件。
+ES6已经敲定，但并不是所有的浏览器都完全支持，详见：<http://kangax.github.io/compat-table/es6/>。要使用ES6，需要一个编译器例如：babel。你可以把它作为一个独立的工具使用，也可以把它放在构建中。grunt，gulp和webpack中都有可以支持babel的插件。
 
 这是一个gulp案列，安装gulp-babel插件：
 
