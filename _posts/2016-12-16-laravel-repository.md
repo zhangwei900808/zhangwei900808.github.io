@@ -32,7 +32,7 @@ HousesController.php
             return View::make('houses.show',compact('house'));
         }
     }
-  ```
+```
 
 这是一个很典型的一段代码使用Eloquent和数据库交互，这段代码工作的很正常，但是controller层对于Eloquent而言将是紧耦合的。在此我们可以注入一个repository创建一个解耦类型的代码版本，这个解耦的版本代码可以使后续程序的具体实现更加简单。
 
