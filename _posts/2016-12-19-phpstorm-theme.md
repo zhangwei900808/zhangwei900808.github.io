@@ -24,6 +24,10 @@ categories: phpstorm theme
    6. To switch the IDE theme (not the code color scheme), go to Tools -> Material Theme and choose 'Darker Theme', 'Default Theme' or 'Lighter Theme'.
 ```
 
+**注意**
+
+> 添加完插件后，如果右侧代码编辑窗口没有变化，可以在Editor->Colors & Fonts->Scheme选择 'Material Theme'就可以了
+
 > [Material Theme UI](https://plugins.jetbrains.com/plugin/8006?pr=androidstudio&ec=&offset=15&max=15)
 
 > [如何修改phpstorm左侧目录文件夹颜色？](https://segmentfault.com/q/1010000007069583)
