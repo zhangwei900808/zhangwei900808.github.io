@@ -7,7 +7,9 @@ categories: phpstorm theme
 
 
 ### 方法如下：
-instructions here!: <https://github.com/ChrisRM/material-theme-jetbrains>
+
+**instructions here!: <https://github.com/ChrisRM/material-theme-jetbrains>**
+
 1. Open the Settings/Preferences dialog (OSX/Unix: ⌘,, Windows: Ctrl+Alt+S)
 
 2. In the left-hand pane, select Plugins.
