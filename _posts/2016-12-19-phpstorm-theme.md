@@ -11,7 +11,7 @@ categories: phpstorm theme
 **instructions here!: <https://github.com/ChrisRM/material-theme-jetbrains>**
 
 ```
-   1. Open the Settings/Preferences dialog (OSX/Unix: ⌘,, Windows: Ctrl+Alt+S)```
+   1. Open the Settings/Preferences dialog (OSX/Unix: ⌘,, Windows: Ctrl+Alt+S)
 
    2. In the left-hand pane, select Plugins.
 
@@ -27,6 +27,8 @@ categories: phpstorm theme
 **注意**
 
 > 添加完插件后，如果右侧代码编辑窗口没有变化，可以在Editor->Colors & Fonts->Scheme选择 'Material Theme'就可以了
+
+> [Laravel中级任务清单源代码](https://github.com/laravel/quickstart-intermediate)
 
 > [Material Theme UI](https://plugins.jetbrains.com/plugin/8006?pr=androidstudio&ec=&offset=15&max=15)
 
