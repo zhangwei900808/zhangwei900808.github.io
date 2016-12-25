@@ -29,22 +29,39 @@ ssh-add ～/.ssh/id_rsa_second
 完成以上步骤后在~/.ssh目录创建config文件，该文件用于配置私钥对应的服务器。内容如下： 
 
 ``` 
-# Default github user(first@mail.com)  
+# Default github user(zw900808@gmail.com)
 Host github.com
 HostName github.com
-User git
-IdentityFile C:/Users/username/.ssh/id_rsa
- 
-# second user(second@mail.com)
-Host github-second
+User zhangwei900808
+IdentityFile /Users/zhangwei/.ssh/id_rsa
+
+# second user(zhangwei900808@outlook.com)
+Host github2
 HostName github.com
-User git
-IdentityFile C:/Users/username/.ssh/id_rsa_second
+User iewgnahz
+IdentityFile /Users/zhangwei/.ssh/id_rsa_zhanwe
+
+# gitlab (zw900808@gmail.com)
+Host gitlab.com
+HostName gitlab.com
+User awbeci
+IdentityFile /Users/zhangwei/.ssh/id_rsa
+```
+
+测试是否连接成功：
+
+```
+➜  .ssh ssh -T git@gitlab.com
+Welcome to GitLab, awbeci!
 ```
 
 Host随意即可，方便自己记忆，后续在添加remote是还需要用到。  
 配置完成后，在连接非默认帐号的github仓库时，远程库的地址要对应地做一些修改，比如现在添加second帐号下的一个仓库test，则需要这样添加：  
+
+```
 git remote add test git@github-second:second/test.git #并非原来的git@github.com:second/test.git  
+```
+
 这样每次连接都会使用id_rsa_second与服务器进行连接。至此，大功告成！  
 注意：github根据配置文件的user.email来获取github帐号显示author信息，所以对于多帐号用户一定要记得将user.email改为相应的email(second@mail.com)。  
 
@@ -59,7 +76,7 @@ git remote add test git@github-second:second/test.git #并非原来的git@g
 git config --global --unset user.name
 git config --global --unset user.email
 
-2.设置每个项目repo的自己的user.email
+2.设置每个项目repo的自己的user.email还有remote
 git config  user.email "xxxx@xx.com"
 git config  user.name "suzie"
 ```
