@@ -60,3 +60,5 @@ vagrant reload --provision
 ### 参考：
 
 > [使用Homestead搭建开发环境](https://solarhell.com/post/2016/04/homestead)
+
+>[Laravel Homestead](https://laravel-china.org/docs/5.1/homestead#installation-and-setup)
