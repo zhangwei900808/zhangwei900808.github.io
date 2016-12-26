@@ -41,6 +41,12 @@ $ vagrant box list
 laravel/homestead               (virtualbox, 1.0.1)
 ```
 
+## 删除指定版本号的box
+
+```
+vagrant box remove --box-version your-box-version your-box-name
+```
+
 后面的过程就请参考 [laravel 安装homestead文档](https://laravel.com/docs/5.3/homestead)
 
 ### 参考：
