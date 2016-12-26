@@ -49,6 +49,16 @@ vagrant box remove --box-version your-box-version your-box-name
 
 后面的过程就请参考 [laravel 安装homestead文档](https://laravel.com/docs/5.3/homestead)
 
+注意：
+
+**如果你在 Homestead box 配置之后更改了 sites 属性，那么应该重新运行
+
+```
+vagrant reload --provision
+```
+
+来更新 Nginx 配置到虚拟机上。**
+
 ### 参考：
 
 > [使用Homestead搭建开发环境](https://solarhell.com/post/2016/04/homestead)
