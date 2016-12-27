@@ -138,6 +138,9 @@ let myvue = new Vue({
 
 ```
 
+**注意：**
+
+
 总结：
 
 1. 我在做第4步的时候卡壳了，因为我压根不知道如何结合middleware和controller，所以在网上找相关的代码参考下
@@ -149,3 +152,7 @@ let myvue = new Vue({
 > [ive-a-little-deep-into-laravel-5](https://www.laravist.com/series/dive-a-little-deep-into-laravel-5/episodes/3)
 
 > [Laravel-5-1-enable-CORS](http://en.vedovelli.com.br/2015/web-development/Laravel-5-1-enable-CORS/)
+
+> [Laravel学习笔记之Route,Middleware和Controller参数传递](https://segmentfault.com/a/1190000007227276)
+
+> [Laravel 学习笔记——路由（中间件与路由组）](https://my.oschina.net/u/2444569/blog/511706)
