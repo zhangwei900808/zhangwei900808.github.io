@@ -139,7 +139,75 @@ let myvue = new Vue({
 ```
 
 **注意：**
+我后台的代码如果写成这样：
 
+```
+exit(json_encode($a));
+```
+
+**就会报错：**
+
+```
+XMLHttpRequest cannot load http://www.awbeci.app/vue/102. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://localhost:8080' is therefore not allowed access.
+```
+
+**只要改成这样就OK了：**
+
+```
+return $a;
+```
+
+**路由代码：**
+
+```
+Route::group(['middleware' => 'vue'], function(){
+    Route::resource('vue', 'VueController');
+});
+```
+
+**laravel代码：**
+
+```
+class VueController extends Controller
+{
+    public function index()
+    {
+        $arr = ["test1"=>"1","test2"=>"2ddd"];
+        return $arr;
+    }
+
+    public function show($id)
+    {
+        $arr = [
+            [
+                "newsid"=>102,
+                "pubtime"=>"2016-10-2",
+                "title"=>'新闻2',
+                "desc"=>'描述2'
+            ],[
+                "newsid"=>101,
+                "pubtime"=>"2016-10-1",
+                "title"=>'新闻1',
+                "desc"=>'描述1'
+            ],[
+                "newsid"=>103,
+                "pubtime"=>"2016-10-3",
+                "title"=>'新闻3',
+                "desc"=>'描述3'
+            ],[
+                "newsid"=>104,
+                "pubtime"=>"2016-10-4",
+                "title"=>'新闻4',
+                "desc"=>'描述4'
+            ]
+        ];
+        foreach ($arr as $a){
+            if($a["newsid"]==$id){
+                return $a;
+            }
+        }
+    }
+```
 
 总结：
 
@@ -147,9 +215,11 @@ let myvue = new Vue({
 
 2. 中间件通过创建=>注册=>使用，是非常方便的，如以后项目中通过中间件可以很好的解决判断用户权限之类的校验问题，根据判断的结果跳转到不同的路由上面
 
+3. Laravel Controller返回的数组就是Json格式
+
 参考：
 
-> [ive-a-little-deep-into-laravel-5](https://www.laravist.com/series/dive-a-little-deep-into-laravel-5/episodes/3)
+> [dive-a-little-deep-into-laravel-5](https://www.laravist.com/series/dive-a-little-deep-into-laravel-5/episodes/3)
 
 > [Laravel-5-1-enable-CORS](http://en.vedovelli.com.br/2015/web-development/Laravel-5-1-enable-CORS/)
 
