@@ -15,9 +15,9 @@ var you = {
   test: function(event) {
     $("#log").append( this.type + " " );
   }
-  ```
+```
 
-``$("#test").click(you.test);``调用这句只有相当于调用：
+`$("#test").click(you.test);`调用这句只有相当于调用：
 
 ```
 $("#test").click(function(event){
