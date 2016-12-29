@@ -45,3 +45,5 @@ $("#test").click(function(event){
 参考：
 
 > [jquery.proxy](http://www.css88.com/jqapi-1.9/jQuery.proxy/)
+
+> [jQuery $.proxy() 方法](http://www.runoob.com/jquery/event-proxy.html)
