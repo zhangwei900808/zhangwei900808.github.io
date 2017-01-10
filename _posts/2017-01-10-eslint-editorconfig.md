@@ -30,3 +30,5 @@ ESLint 是完全插件化的。每一个规则都是一个插件并且你可以�
 > [详解 ESLint 规则，规范你的代码](http://blog.guowenfh.com/2016/08/07/ESLint-Rules/)
 
 > [enforce the consistent use of either backticks, double, or single quotes (quotes)](http://eslint.org/docs/rules/quotes)
+
+> [EditorConfig 介绍](http://www.jianshu.com/p/712cea0ef70e)
