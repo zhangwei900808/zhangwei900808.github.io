@@ -71,6 +71,7 @@ ctrl+shift+f搜索
 勾选Hide Ignored Names，在文件列表里面就消失了
 
 ## 几个有用的链接
+
 1. Atom 编辑器使用者手册
 2. Atom官方网站
 3. Atom github地址
